@@ -1,0 +1,480 @@
+/* Body */
+
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  font-family: "Roboto", sans-serif;
+}
+
+body h1,
+h2,
+h3,
+h4,
+h5 {
+  color: red;
+}
+
+/* NavBar */
+/* Navbar styling */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Primary background color */
+  padding: 1rem 1.5rem;
+  transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
+  position: fixed; /* Fix navbar on top */
+  width: 100%;
+  z-index: 1000; /* Ensure it’s always on top */
+  top: 0;
+}
+
+.navbar.hidden {
+  top: -100px; /* Hide navbar out of view */
+  opacity: 0; /* Fade out effect */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: white; /* White nav items */
+  margin-right: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: red; /* Lighter color on hover */
+}
+
+/* Active link styling */
+.navbar-nav .nav-item .active {
+  border-bottom: 2px solid white;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    margin-right: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* HomePage */
+
+.carousel {
+  overflow: hidden; /* Prevent horizontal scrollbar */
+  border-top: 2px solid black; /* Optional: add border to the top of the carousel */
+}
+
+.carousel-inner {
+  height: 400px; /* Set your desired height */
+}
+
+.carousel-item img {
+  height: 100%; /* Ensures the image takes up the full height of the carousel */
+  width: max-content; /* Adjust width proportionally */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position */
+  color: white; /* Text color */
+  text-align: center; /* Center text alignment */
+  font-weight: bold; /* Make text bold */
+  font-size: 2.5rem; /* Adjust font size for header (you can change this value) */
+  padding: 10px; /* Optional: padding for text */
+  opacity: 0; /* Start invisible */
+  transition: opacity 1.5s ease; /* Fade transition */
+}
+
+.carousel-caption.show {
+  opacity: 1; /* Show caption */
+}
+
+/* Welcome Page */
+
+.welcome-section {
+  height: 70vh; /* Adjust this height as needed */
+}
+
+.carousel-item img {
+  height: 100%; /* Ensure images take full height of the carousel */
+  object-fit: cover; /* Maintain aspect ratio while covering the area */
+}
+
+#welcomepg {
+  background-color: black;
+  color: white;
+}
+
+.section {
+  padding: 50px 0; /* Add padding to the section */
+}
+
+#welcomePg p {
+  margin: auto;
+  width: 85%;
+}
+
+#welcomePg h2 {
+  padding-bottom: 15px;
+}
+
+.text-container {
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
+
+.image-container {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.content {
+  max-width: 800px; /* Limit max width of the text content */
+}
+
+/* About Us */
+
+.about-us {
+  padding: 40px 20px;
+  background-color: white; /* Light background for contrast */
+  color: black;
+}
+
+#about-us h2,
+h3 {
+  font-weight: 700;
+}
+
+.about-us .content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; /* Increased space between items */
+  justify-content: center; /* Center the content horizontally */
+  max-width: 1200px; /* Limit max width */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  padding: 0 15px; /* Add padding to prevent content from reaching edges */
+}
+
+.about-us .content img {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  width: 45%; /* Set image width to 50% */
+  margin: 0 20px; /* Space between image and text */
+}
+
+.about-us .content div {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-us .content {
+    flex-direction: column; /* Stack on small screens */
+    text-align: center; /* Center align text */
+  }
+
+  .about-us .content img {
+    width: 80%; /* Adjust image size on small screens */
+    margin: 0; /* Remove margin on small screens */
+  }
+}
+
+.about-us p {
+  max-width: 800px; /* Set a max width for the paragraph */
+  margin: 0 auto; /* Center the paragraph */
+  padding: 20px 15px; /* Add horizontal padding */
+  text-align: center; /* Center align text */
+  line-height: 1.6; /* Improve readability with line height */
+}
+
+/* Testimonials */
+#testimonialCarousel {
+  background-color: #000; /* Black background for the carousel section */
+  padding: 50px 20px; /* Reduce spacing on the sides, especially for smaller screens */
+  color: white; /* Ensure all text in the carousel is white for contrast */
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #ccc; /* Lighter grey color for the text */
+  margin: 0 auto;
+  max-width: 90%; /* Ensure testimonial text does not stretch too wide */
+}
+
+img.rounded-circle {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.carousel-indicators button {
+  background-color: #ccc; /* Grey color for inactive indicators */
+}
+
+.carousel-indicators .active {
+  background-color: #f00; /* Red for active indicator */
+}
+
+h2 {
+  color: #f00; /* Red color for the headers */
+  font-weight: bold; /* Make headers bold */
+  font-size: 2rem;
+}
+
+h5 {
+  color: #f00; /* Red color for the testimonial author name */
+  font-weight: bold;
+}
+
+p.text-muted {
+  color: #bbb; /* Muted grey for author job title */
+}
+
+@media (max-width: 768px) {
+  #testimonialCarousel {
+    padding: 30px 10px; /* Further reduce padding for small screens */
+  }
+
+  .testimonial-text {
+    font-size: 1rem; /* Smaller text size for smaller screens */
+    max-width: 100%; /* Full width for mobile devices */
+  }
+
+  img.rounded-circle {
+    width: 60px; /* Slightly smaller image on smaller screens */
+    height: 60px;
+  }
+
+  h2 {
+    font-size: 1.75rem; /* Adjust header size on smaller screens */
+  }
+}
+
+/* Call To Action */
+
+/* Gradient Background */
+
+.gradient-half-primary-v1 {
+  position: relative; /* Positioning for layering */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.bg-img-hero {
+  background-size: cover; /* Cover entire area */
+  background-position: center center; /* Center the background image */
+  background-repeat: no-repeat;
+  min-height: 20rem;
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.bg-img-hero::before {
+  content: ""; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  z-index: 1; /* Place overlay above background */
+}
+
+.container {
+  position: relative; /* Relative to allow z-index layering */
+  z-index: 2; /* Place container above overlay */
+}
+
+.btn-wide {
+  padding: 10px 30px; /* Wider padding for buttons */
+  font-size: 16px; /* Font size for buttons */
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem; /* Smaller font size on mobile */
+  }
+}
+
+.call-to-action {
+  background-image: url("../images/contact.jpg"); /* Replace with your image */
+  background-attachment: fixed; /* Only this section's background will move on scroll */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 20px; /* Padding ensures content doesn't reach the edges */
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.call-to-action h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-text h2 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    text-align: center;
+  }
+  .overlay-text h2 {
+    font-size: 28px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+}
+
+.call-to-action h2,
+.call-to-action p,
+.call-to-action .btn,
+.call-to-action form {
+  position: relative;
+  z-index: 2; /* Text, buttons, and form are on top of the background */
+}
+
+.call-to-action::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Optional: dark overlay for better text readability */
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    background-attachment: scroll; /* Disable parallax on smaller screens for better performance */
+  }
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#confirmationMessage {
+  display: none;
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+.sendBtn {
+  padding: 1rem 3.5rem;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #333; /* Dark background */
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer h5 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.footer p,
+.footer a {
+  font-size: 1rem;
+}
+
+.footer .social-icons a {
+  color: #fff;
+  margin-right: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer .social-icons a:hover {
+  color: #00acd5; /* Hover color change */
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #00acd5; /* Link hover color */
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  list-style: none;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #00acd5;
+}
+
+@media (max-width: 768px) {
+  .footer .row > div {
+    text-align: center; /* Center align for smaller screens */
+  }
+
+  .footer .social-icons {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+/* colorway */
