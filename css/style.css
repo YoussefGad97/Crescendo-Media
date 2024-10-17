@@ -1,4 +1,7 @@
 /* Body */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -10,7 +13,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: red;
+  color: #00acd5;
 }
 
 /* NavBar */
@@ -45,7 +48,7 @@ h5 {
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: red; /* Lighter color on hover */
+  color: #00acd5; /* Lighter color on hover */
 }
 
 /* Active link styling */
@@ -53,7 +56,7 @@ h5 {
   border-bottom: 2px solid white;
 }
 
-/* Responsive for mobile */
+/* Responsive for mobile (NavMobile)*/
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 1.25rem;
@@ -64,6 +67,16 @@ h5 {
     font-size: 1rem;
     text-align: center;
   }
+
+  .navbar {
+    background-color: black; /* Primary background color */
+    padding: 1rem 1.5rem;
+    transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
+    position: fixed; /* Fix navbar on top */
+    width: 100%;
+    z-index: 1000; /* Ensure it’s always on top */
+    top: 0;
+  }
 }
 
 /* HomePage */
@@ -73,14 +86,30 @@ h5 {
   border-top: 2px solid black; /* Optional: add border to the top of the carousel */
 }
 
+.carouselBtnMob {
+  background-color: transparent;
+  border: transparent;
+}
+
 .carousel-inner {
-  height: 400px; /* Set your desired height */
+  min-height: 400px; /* Set your desi#00acd5 height */
 }
 
 .carousel-item img {
   height: 100%; /* Ensures the image takes up the full height of the carousel */
   width: max-content; /* Adjust width proportionally */
   object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.carousel-item {
+  transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+  opacity: 0; /* Initially hidden */
+  display: none; /* Hide non-active items */
+}
+
+.carousel-item.active {
+  opacity: 1; /* Show active item */
+  display: block; /* Show active item */
 }
 
 .carousel-caption {
@@ -94,27 +123,54 @@ h5 {
   font-size: 2.5rem; /* Adjust font size for header (you can change this value) */
   padding: 10px; /* Optional: padding for text */
   opacity: 0; /* Start invisible */
-  transition: opacity 1.5s ease; /* Fade transition */
+  transition: opacity 1.5s ease-in-out; /* Fade transition */
 }
 
 .carousel-caption.show {
   opacity: 1; /* Show caption */
 }
 
-/* Welcome Page */
+/* Resposnsive For Mobile (HomeMobile)*/
 
-.welcome-section {
-  height: 70vh; /* Adjust this height as needed */
+@media (max-width: 768px) {
+  .carousel-caption {
+    position: absolute;
+    top: 55%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -55%); /* Adjust position */
+    color: white; /* Text color */
+    text-align: center; /* Center text alignment */
+    font-weight: bold; /* Make text bold */
+    font-size: 2rem; /* Adjust font size for header (you can change this value) */
+    padding: 10px; /* Optional: padding for text */
+    opacity: 0; /* Start invisible */
+    transition: opacity 1.5s ease; /* Fade transition */
+    width: 100%;
+  }
+
+  .carousel-inner {
+    min-height: 350px; /* Set your desi#00acd5 height */
+  }
+
+  .carouselBtnMob {
+    background-color: transparent;
+    border: transparent;
+  }
 }
 
-.carousel-item img {
-  height: 100%; /* Ensure images take full height of the carousel */
-  object-fit: cover; /* Maintain aspect ratio while covering the area */
+/* Welcome Page */
+
+#welcomePg img {
+  box-shadow: -10px 10px 30px rgba(0, 172, 213, 0.6); /* #00acd5 shadow */
+  width: 600px;
+  border: 5px;
+  border-radius: 10px;
 }
 
 #welcomepg {
   background-color: black;
   color: white;
+  min-height: 500px; /* Adjust this height as needed */
 }
 
 .section {
@@ -145,17 +201,55 @@ h5 {
   max-width: 800px; /* Limit max width of the text content */
 }
 
+/* Responsive (HomePgMobile) */
+
+@media (max-width: 768px) {
+  #welcomePg img {
+    box-shadow: -10px 10px 30px rgba(0, 172, 213, 0.6); /* #00acd5 shadow */
+    width: 400px;
+    border: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  #welcomepg {
+    background-color: black;
+    color: white;
+    max-height: 700px; /* Adjust this height as needed */
+  }
+
+  .section {
+    padding: 70px 0; /* Add padding to the section */
+  }
+
+  #welcomePg p {
+    margin: auto;
+    width: 85%;
+  }
+
+  #welcomePg h2 {
+    padding: 25px;
+  }
+}
+
 /* About Us */
 
 .about-us {
   padding: 40px 20px;
-  background-color: white; /* Light background for contrast */
+  background-color: #fffde7; /* Light background for contrast */
   color: black;
 }
 
 #about-us h2,
 h3 {
   font-weight: 700;
+}
+
+.aboutContentShadow {
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2); /* #00acd5 shadow */
+  border: 5px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .about-us .content {
@@ -166,7 +260,7 @@ h3 {
   max-width: 1200px; /* Limit max width */
   margin-left: auto; /* Center horizontally */
   margin-right: auto; /* Center horizontally */
-  padding: 0 15px; /* Add padding to prevent content from reaching edges */
+  padding: 0 25px; /* Add padding to prevent content from reaching edges */
 }
 
 .about-us .content img {
@@ -179,19 +273,64 @@ h3 {
 
 .about-us .content div {
   flex: 1; /* Take up remaining space */
-  padding: 20px;
+  padding: 50px;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments (AboutUsMobile) */
 @media (max-width: 768px) {
   .about-us .content {
-    flex-direction: column; /* Stack on small screens */
+    flex-direction: column-reverse; /* Stack on small screens */
     text-align: center; /* Center align text */
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; /* Increased space between items */
+    justify-content: center; /* Center the content horizontally */
+    max-width: 1200px; /* Limit max width */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    padding: 10px 10px; /* Add padding to prevent content from reaching edges */
   }
 
   .about-us .content img {
     width: 80%; /* Adjust image size on small screens */
     margin: 0; /* Remove margin on small screens */
+  }
+
+  .about-us {
+    padding: 40px 20px;
+    background-color: #fffde7; /* Light background for contrast */
+    color: black;
+  }
+
+  #about-us h2,
+  h3 {
+    font-weight: 700;
+  }
+
+  .aboutContentShadow {
+    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2); /* #00acd5 shadow */
+    border: 5px;
+    border-radius: 10px;
+    background-color: white;
+    padding-top: 15px;
+  }
+
+  .about-us .content img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Set image width to 50% */
+    margin: 10px; /* Space between image and text */
+  }
+
+  .about-us .content div {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+  }
+
+  .aboutTab2 {
+    display: flex;
+    flex-direction: column !important;
   }
 }
 
@@ -204,9 +343,10 @@ h3 {
 }
 
 /* Testimonials */
+
 #testimonialCarousel {
   background-color: #000; /* Black background for the carousel section */
-  padding: 50px 20px; /* Reduce spacing on the sides, especially for smaller screens */
+  padding: 50px 20px; /* #00acd5uce spacing on the sides, especially for smaller screens */
   color: white; /* Ensure all text in the carousel is white for contrast */
 }
 
@@ -229,17 +369,17 @@ img.rounded-circle {
 }
 
 .carousel-indicators .active {
-  background-color: #f00; /* Red for active indicator */
+  background-color: #00acd5; /* #00acd5 for active indicator */
 }
 
 h2 {
-  color: #f00; /* Red color for the headers */
+  color: #00acd5; /* #00acd5 color for the headers */
   font-weight: bold; /* Make headers bold */
   font-size: 2rem;
 }
 
 h5 {
-  color: #f00; /* Red color for the testimonial author name */
+  color: #00acd5; /* #00acd5 color for the testimonial author name */
   font-weight: bold;
 }
 
@@ -247,9 +387,11 @@ p.text-muted {
   color: #bbb; /* Muted grey for author job title */
 }
 
+/* Responsive (TestimonialsMobile) */
+
 @media (max-width: 768px) {
   #testimonialCarousel {
-    padding: 30px 10px; /* Further reduce padding for small screens */
+    padding: 30px 10px; /* Further #00acd5uce padding for small screens */
   }
 
   .testimonial-text {
@@ -314,7 +456,7 @@ p.text-muted {
 }
 
 .call-to-action {
-  background-image: url("../images/contact.jpg"); /* Replace with your image */
+  background-image: url("../images/contact1.jpg"); /* Replace with your image */
   background-attachment: fixed; /* Only this section's background will move on scroll */
   background-position: center;
   background-repeat: no-repeat;
@@ -417,7 +559,7 @@ p.text-muted {
 /* Footer */
 
 .footer {
-  background-color: #333; /* Dark background */
+  background-color: black; /* Dark background */
   color: #fff;
   padding: 50px 0;
 }
@@ -425,21 +567,19 @@ p.text-muted {
 .footer h5 {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  color: #00acd5; /* Heading color */
 }
 
 .footer p,
 .footer a {
   font-size: 1rem;
+  color: #f6e3ba; /* Text and link color */
 }
 
 .footer .social-icons a {
-  color: #fff;
+  color: #f6e3ba;
   margin-right: 15px;
   transition: color 0.3s ease-in-out;
-}
-
-.footer .social-icons a:hover {
-  color: #00acd5; /* Hover color change */
 }
 
 .footer a {
@@ -456,10 +596,11 @@ p.text-muted {
 
 .footer ul li {
   list-style: none;
+  margin-bottom: 10px;
 }
 
 .footer ul li a {
-  color: #fff;
+  color: #f6e3ba; /* Link color */
   text-decoration: none;
 }
 
@@ -470,6 +611,7 @@ p.text-muted {
 @media (max-width: 768px) {
   .footer .row > div {
     text-align: center; /* Center align for smaller screens */
+    margin-bottom: 20px; /* Add some margin for spacing */
   }
 
   .footer .social-icons {
@@ -477,4 +619,22 @@ p.text-muted {
   }
 }
 
-/* colorway */
+.footer ul li a {
+  color: #f6e3ba; /* Initial link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer ul li a:hover {
+  color: #00acd5 !important; /* Hover color with !important to enforce the style */
+}
+
+/* Initial state for fade-section */
+.fade-section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}

@@ -80,3 +80,17 @@ $(document).ready(function () {
     wrap: true,
   });
 });
+
+// This ensures that the carousel starts and uses Bootstrap's functionality
+var myCarousel = document.querySelector("#carouselExample");
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000, // Set your interval here
+  wrap: true, // Enable wrapping to the first slide
+});
+
+// Optional: To preload images if needed
+const images = ["images/slide1.jpg", "images/slide2.jpg", "images/slide3.jpg"];
+images.forEach((src) => {
+  const img = new Image();
+  img.src = src;
+});
