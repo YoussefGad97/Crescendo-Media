@@ -1,0 +1,692 @@
+/* Body */
+
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  font-family: "Roboto", sans-serif;
+}
+
+body h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #00acd5;
+}
+
+/* NavBar */
+/* Navbar styling */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Primary background color */
+  padding: 1rem 1.5rem;
+  transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
+  position: fixed; /* Fix navbar on top */
+  width: 100%;
+  z-index: 1000; /* Ensure it’s always on top */
+  top: 0;
+}
+
+.navbar.hidden {
+  top: -100px; /* Hide navbar out of view */
+  opacity: 0; /* Fade out effect */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: white; /* White nav items */
+  margin-right: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #00acd5; /* Lighter color on hover */
+}
+
+/* Active link styling */
+.navbar-nav .nav-item .active {
+  border-bottom: 2px solid white;
+}
+
+/* Responsive for mobile (NavMobile)*/
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    margin-right: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .navbar {
+    background-color: black; /* Primary background color */
+    padding: 1rem 1.5rem;
+    transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
+    position: fixed; /* Fix navbar on top */
+    width: 100%;
+    z-index: 1000; /* Ensure it’s always on top */
+    top: 0;
+  }
+}
+
+/* HomePage */
+
+.carousel {
+  overflow: hidden; /* Prevent horizontal scrollbar */
+  border-top: 2px solid black; /* Optional: add border to the top of the carousel */
+}
+
+.carouselBtnMob {
+  background-color: transparent;
+  border: transparent;
+}
+
+.carousel-inner {
+  min-height: 400px; /* Set your desi#00acd5 height */
+}
+
+.carousel-item img {
+  height: 100%; /* Ensures the image takes up the full height of the carousel */
+  width: max-content; /* Adjust width proportionally */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.carousel-item {
+  transition: opacity ease-in-out 1s  /* Smooth opacity transition */
+  opacity: 0; /* Initially hidden */
+  display: none; /* Hide non-active items */
+}
+
+.carousel-item.active {
+  opacity: 1; /* Show active item */
+  display: block; /* Show active item */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 60%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position */
+  color: white; /* Text color */
+  text-align: center; /* Center text alignment */
+  font-weight: bold; /* Make text bold */
+  font-size: 2.5rem; /* Adjust font size for header (you can change this value) */
+  padding: 10px; /* Optional: padding for text */
+  opacity: 0; /* Start invisible */
+  transition: opacity 1.5s ease-in-out; /* Fade transition */
+}
+
+.carousel-caption.show {
+  opacity: 1; /* Show caption */
+}
+
+
+/* General style for carousel headers */
+.carousel-item h1, .carousel-item h2 {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+/* When the carousel item is active, make the header visible */
+.carousel-item.active h1, .carousel-item.active h2 {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Smooth transition for fade-in */
+}
+
+/* Optional: Add animation delay if you want the headers to appear with a delay */
+.carousel-item.active h1 {
+  transition-delay: 0.2s; /* Delay the fade-in for effect */
+}
+
+.carousel-item.active h2 {
+  transition-delay: 0.4s; /* Delay the fade-in for effect */
+}
+
+
+
+
+
+
+
+
+
+
+/* Resposnsive For Mobile (HomeMobile)*/
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    position: absolute;
+    top: 55%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -55%); /* Adjust position */
+    color: white; /* Text color */
+    text-align: center; /* Center text alignment */
+    font-weight: bold; /* Make text bold */
+    font-size: 2rem; /* Adjust font size for header (you can change this value) */
+    padding: 10px; /* Optional: padding for text */
+    opacity: 0; /* Start invisible */
+    transition: opacity 1.5s ease; /* Fade transition */
+    width: 100%;
+  }
+
+  .carousel-inner {
+    min-height: 350px; /* Set your desi#00acd5 height */
+  }
+
+  .carouselBtnMob {
+    background-color: transparent;
+    border: transparent;
+  }
+}
+
+/* Welcome Page */
+
+#welcomePg img {
+  box-shadow: -10px 10px 30px rgba(0, 172, 213, 0.6); /* #00acd5 shadow */
+  width: 600px;
+  border: 5px;
+  border-radius: 10px;
+}
+
+#welcomepg {
+  background-color: black;
+  color: white;
+  min-height: 500px; /* Adjust this height as needed */
+}
+
+.section {
+  padding: 50px 0px; /* Add padding to the section */
+}
+
+#welcomePg p {
+  margin: auto;
+  width: 85%;
+}
+
+#welcomePg h2 {
+  padding-bottom: 15px;
+}
+
+.text-container {
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
+
+.image-container {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.content {
+  max-width: 800px; /* Limit max width of the text content */
+}
+
+/* Responsive (HomePgMobile) */
+
+@media (max-width: 768px) {
+  #welcomePg img {
+    box-shadow: -10px 10px 30px rgba(0, 172, 213, 0.6); /* #00acd5 shadow */
+    width: 400px;
+    border: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  #welcomepg {
+    background-color: black;
+    color: white;
+    max-height: 700px; /* Adjust this height as needed */
+  }
+
+  .section {
+    padding: 70px 0; /* Add padding to the section */
+  }
+
+  #welcomePg p {
+    margin: auto;
+    width: 85%;
+  }
+
+  #welcomePg h2 {
+    padding: 25px;
+  }
+}
+
+/* About Us */
+
+.about-us {
+  padding: 40px 20px;
+  background-color: #fffde7; /* Light background for contrast */
+  color: black;
+}
+
+#about-us h2,
+h3 {
+  font-weight: 700;
+}
+
+.aboutContentShadow {
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2); /* #00acd5 shadow */
+  border: 5px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.about-us .content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; /* Increased space between items */
+  justify-content: center; /* Center the content horizontally */
+  max-width: 1200px; /* Limit max width */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  padding: 0 25px; /* Add padding to prevent content from reaching edges */
+}
+
+.about-us .content img {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  width: 45%; /* Set image width to 50% */
+  margin: 0 20px; /* Space between image and text */
+}
+
+.about-us .content div {
+  flex: 1; /* Take up remaining space */
+  padding: 50px;
+}
+
+/* Responsive adjustments (AboutUsMobile) */
+@media (max-width: 768px) {
+  .about-us .content {
+    flex-direction: column-reverse; /* Stack on small screens */
+    text-align: center; /* Center align text */
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; /* Increased space between items */
+    justify-content: center; /* Center the content horizontally */
+    max-width: 1200px; /* Limit max width */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    padding: 10px 10px; /* Add padding to prevent content from reaching edges */
+  }
+
+  .about-us .content img {
+    width: 80%; /* Adjust image size on small screens */
+    margin: 0; /* Remove margin on small screens */
+  }
+
+  .about-us {
+    padding: 40px 20px;
+    background-color: #fffde7; /* Light background for contrast */
+    color: black;
+  }
+
+  #about-us h2,
+  h3 {
+    font-weight: 700;
+  }
+
+  .aboutContentShadow {
+    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2); /* #00acd5 shadow */
+    border: 5px;
+    border-radius: 10px;
+    background-color: white;
+    padding-top: 15px;
+  }
+
+  .about-us .content img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Set image width to 50% */
+    margin: 10px; /* Space between image and text */
+  }
+
+  .about-us .content div {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+  }
+
+  .aboutTab2 {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+
+.about-us p {
+  max-width: 800px; /* Set a max width for the paragraph */
+  margin: 0 auto; /* Center the paragraph */
+  padding: 20px 15px; /* Add horizontal padding */
+  text-align: center; /* Center align text */
+  line-height: 1.6; /* Improve readability with line height */
+}
+
+/* Testimonials */
+
+#testimonialCarousel {
+  background-color: #000; /* Black background for the carousel section */
+  padding: 50px 20px; /* #00acd5uce spacing on the sides, especially for smaller screens */
+  color: white; /* Ensure all text in the carousel is white for contrast */
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #ccc; /* Lighter grey color for the text */
+  margin: 0 auto;
+  max-width: 90%; /* Ensure testimonial text does not stretch too wide */
+}
+
+img.rounded-circle {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.carousel-indicators button {
+  background-color: #ccc; /* Grey color for inactive indicators */
+}
+
+.carousel-indicators .active {
+  background-color: #00acd5; /* #00acd5 for active indicator */
+}
+
+h2 {
+  color: #00acd5; /* #00acd5 color for the headers */
+  font-weight: bold; /* Make headers bold */
+  font-size: 2rem;
+}
+
+h5 {
+  color: #00acd5; /* #00acd5 color for the testimonial author name */
+  font-weight: bold;
+}
+
+p.text-muted {
+  color: #bbb; /* Muted grey for author job title */
+}
+
+/* Responsive (TestimonialsMobile) */
+
+@media (max-width: 768px) {
+  #testimonialCarousel {
+    padding: 30px 10px; /* Further #00acd5uce padding for small screens */
+  }
+
+  .testimonial-text {
+    font-size: 1rem; /* Smaller text size for smaller screens */
+    max-width: 100%; /* Full width for mobile devices */
+  }
+
+  img.rounded-circle {
+    width: 60px; /* Slightly smaller image on smaller screens */
+    height: 60px;
+  }
+
+  h2 {
+    font-size: 1.75rem; /* Adjust header size on smaller screens */
+  }
+}
+
+/* Call To Action */
+
+/* Gradient Background */
+
+.gradient-half-primary-v1 {
+  position: relative; /* Positioning for layering */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.bg-img-hero {
+  background-size: cover; /* Cover entire area */
+  background-position: center center; /* Center the background image */
+  background-repeat: no-repeat;
+  min-height: 20rem;
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.bg-img-hero::before {
+  content: ""; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  z-index: 1; /* Place overlay above background */
+}
+
+.container {
+  position: relative; /* Relative to allow z-index layering */
+  z-index: 2; /* Place container above overlay */
+}
+
+.btn-wide {
+  padding: 10px 30px; /* Wider padding for buttons */
+  font-size: 16px; /* Font size for buttons */
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem; /* Smaller font size on mobile */
+  }
+}
+
+.call-to-action {
+  background-image: url("../images/contact1.jpg"); /* Replace with your image */
+  background-attachment: fixed; /* Only this section's background will move on scroll */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 20px; /* Padding ensures content doesn't reach the edges */
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.call-to-action h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-text h2 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    text-align: center;
+  }
+  .overlay-text h2 {
+    font-size: 28px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+}
+
+.call-to-action h2,
+.call-to-action p,
+.call-to-action .btn,
+.call-to-action form {
+  position: relative;
+  z-index: 2; /* Text, buttons, and form are on top of the background */
+}
+
+.call-to-action::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Optional: dark overlay for better text readability */
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    background-attachment: scroll; /* Disable parallax on smaller screens for better performance */
+  }
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#confirmationMessage {
+  display: none;
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+.sendBtn {
+  padding: 1rem 3.5rem;
+}
+
+/* Footer */
+
+.footer {
+  background-color: black; /* Dark background */
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer h5 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #00acd5; /* Heading color */
+}
+
+.footer p,
+.footer a {
+  font-size: 1rem;
+  color: #f6e3ba; /* Text and link color */
+}
+
+.footer .social-icons a {
+  color: #f6e3ba;
+  margin-right: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #00acd5; /* Link hover color */
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #f6e3ba; /* Link color */
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #00acd5;
+}
+
+@media (max-width: 768px) {
+  .footer .row > div {
+    text-align: center; /* Center align for smaller screens */
+    margin-bottom: 20px; /* Add some margin for spacing */
+  }
+
+  .footer .social-icons {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+.footer ul li a {
+  color: #f6e3ba; /* Initial link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer ul li a:hover {
+  color: #00acd5 !important; /* Hover color with !important to enforce the style */
+}
+
+/* back to the top button */
+
+/* Style for the back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden initially */
+  background-color: #00acd5; /* Blue background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  opacity: 0.8;
+}
+
+/* Responsive: Adjust the button's size on smaller screens */
+@media (max-width: 600px) {
+  .back-to-top {
+    padding: 10px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
