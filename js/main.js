@@ -94,3 +94,28 @@ images.forEach((src) => {
   const img = new Image();
   img.src = src;
 });
+
+// back to the top button
+
+// Get the button
+let backToTopButton = document.getElementById("backToTop");
+
+// Show the button when scrolled down 100px
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+};
+
+// Scroll back to the top when the button is clicked
+backToTopButton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scroll
+  });
+});

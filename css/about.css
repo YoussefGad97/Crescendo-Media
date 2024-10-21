@@ -64,9 +64,32 @@
 /* AboutUS */
 
 .about-us {
-  background-color: #00acd5; /* Background color */
   padding-top: 10rem;
   color: white; /* Text color */
+  position: relative;
+  background-image: url("../images/AboutUs.jpg"); /* Replace with your image */
+  background-size: contain;
+  background-position: center;
+  height: 100vh; /* Adjust based on your needs */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow to the section */
+}
+.about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay (shade) */
+  z-index: 1; /* Keeps the overlay above the background image */
+}
+
+.about-us .content {
+  position: relative;
+  z-index: 2; /* Ensures the content is above the overlay */
+  color: white; /* Adjust text color as needed */
+  text-align: center;
+  padding: 50px; /* Adjust padding based on design */
 }
 
 .about-us h2 {
@@ -135,7 +158,6 @@
     max-width: 100px;
   }
 }
-
 
 .title h2 {
   font-family: "Poppins", sans-serif;
@@ -342,7 +364,7 @@
   width: 100%;
   opacity: 0;
   transition: 0.9s ease;
-  background-color:#00acd5;
+  background-color: #00acd5;
 }
 
 .member-img:hover img {
@@ -367,76 +389,40 @@
   font-size: 1.5em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*  back to the top button */
+
+/* Style for the back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden initially */
+  background-color: #00acd5; /* blue background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  opacity: 0.8;
+}
+
+/* Responsive: Adjust the button's size on smaller screens */
+@media (max-width: 600px) {
+  .back-to-top {
+    padding: 10px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
 
 /* Call To Action */
 
@@ -485,7 +471,7 @@
 }
 
 .call-to-action {
-  background-image: url("../images/contact1.jpg"); /* Replace with your image */
+  background-image: url("../images/contact2.jpeg"); /* Replace with your image */
   background-attachment: fixed; /* Only this section's background will move on scroll */
   background-position: center;
   background-repeat: no-repeat;
