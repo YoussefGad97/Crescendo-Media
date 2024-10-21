@@ -1,0 +1,432 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+
+/* Projects */
+
+.projects-section {
+  background-color: #f5f5dc; /* Section background color */
+  padding: 50px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.project-block img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.project-content {
+  max-width: 600px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-content h2 {
+  color: #00acd5; /* Text header color */
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  color: #333;
+  line-height: 1.6;
+
+}
+
+@media (max-width: 768px) {
+  .project-block {
+    flex-direction: column;
+  }
+
+  .project-block img {
+    margin: 0 0 20px 0;
+  }
+
+  .project-content {
+    text-align: center;
+  }
+}
+
+/* NavBar */
+/* Navbar styling */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Primary background color */
+  padding: 1rem 1.5rem;
+  transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
+  position: fixed; /* Fix navbar on top */
+  width: 100%;
+  z-index: 1000; /* Ensure it’s always on top */
+  top: 0;
+}
+
+.navbar.hidden {
+  top: -100px; /* Hide navbar out of view */
+  opacity: 0; /* Fade out effect */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: white; /* White nav items */
+  margin-right: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #00acd5; /* Lighter color on hover */
+}
+
+/* Active link styling */
+.navbar-nav .nav-item .active {
+  border-bottom: 2px solid white;
+}
+
+/* Responsive for mobile (NavMobile)*/
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    margin-right: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .navbar {
+    background-color: black; /* Primary background color */
+    padding: 1rem 1.5rem;
+    transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
+    position: fixed; /* Fix navbar on top */
+    width: 100%;
+    z-index: 1000; /* Ensure it’s always on top */
+    top: 0;
+  }
+}
+
+
+
+/* Projects Landing Page */
+
+.projects {
+  padding: 15rem;
+  color: white; /* Text color */
+  font-size: 1.3rem;
+  position: relative;
+  background-image: url("../images/projects2.jpg"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Adjust based on your needs */
+}
+.projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay (shade) */
+  z-index: 1; /* Keeps the overlay above the background image */
+}
+
+.projects h2 {
+  color: #00acd5;
+  font-size: 3rem;
+  font-weight: Bolder;
+}
+
+/* Call To Action */
+
+/* Gradient Background */
+
+.gradient-half-primary-v1 {
+  position: relative; /* Positioning for layering */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.bg-img-hero {
+  background-size: cover; /* Cover entire area */
+  background-position: center center; /* Center the background image */
+  background-repeat: no-repeat;
+  min-height: 20rem;
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.bg-img-hero::before {
+  content: ""; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  z-index: 1; /* Place overlay above background */
+}
+
+.container {
+  position: relative; /* Relative to allow z-index layering */
+  z-index: 2; /* Place container above overlay */
+}
+
+.btn-wide {
+  padding: 10px 30px; /* Wider padding for buttons */
+  font-size: 16px; /* Font size for buttons */
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem; /* Smaller font size on mobile */
+  }
+}
+
+.call-to-action {
+  background-image: url("../images/contact2.jpeg"); /* Replace with your image */
+  background-attachment: fixed; /* Only this section's background will move on scroll */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 20px; /* Padding ensures content doesn't reach the edges */
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.call-to-action h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay-text h2 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    text-align: center;
+  }
+  .overlay-text h2 {
+    font-size: 28px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+}
+
+.call-to-action h2,
+.call-to-action p,
+.call-to-action .btn,
+.call-to-action form {
+  position: relative;
+  z-index: 2; /* Text, buttons, and form are on top of the background */
+}
+
+.call-to-action::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Optional: dark overlay for better text readability */
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    background-attachment: scroll; /* Disable parallax on smaller screens for better performance */
+  }
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#confirmationMessage {
+  display: none;
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+.sendBtn {
+  padding: 1rem 3.5rem;
+}
+
+/* Footer */
+
+.footer {
+  background-color: black; /* Dark background */
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer h5 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #00acd5; /* Heading color */
+}
+
+.footer p,
+.footer a {
+  font-size: 1rem;
+  color: #f6e3ba; /* Text and link color */
+}
+
+.footer .social-icons a {
+  color: #f6e3ba;
+  margin-right: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #00acd5; /* Link hover color */
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #f6e3ba; /* Link color */
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #00acd5;
+}
+
+@media (max-width: 768px) {
+  .footer .row > div {
+    text-align: center; /* Center align for smaller screens */
+    margin-bottom: 20px; /* Add some margin for spacing */
+  }
+
+  .footer .social-icons {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+.footer ul li a {
+  color: #f6e3ba; /* Initial link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer ul li a:hover {
+  color: #00acd5 !important; /* Hover color with !important to enforce the style */
+}
+
+/* Initial state for fade-section */
+.fade-section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/*  back to the top button */
+
+/* Style for the back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden initially */
+  background-color: #00acd5; /* blue background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  opacity: 0.8;
+}
+
+/* Responsive: Adjust the button's size on smaller screens */
+@media (max-width: 600px) {
+  .back-to-top {
+    padding: 10px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}

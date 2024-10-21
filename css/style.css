@@ -1,7 +1,4 @@
 /* Body */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -349,6 +346,7 @@ h3 {
   background-color: #000; /* Black background for the carousel section */
   padding: 50px 20px; /* #00acd5uce spacing on the sides, especially for smaller screens */
   color: white; /* Ensure all text in the carousel is white for contrast */
+  
 }
 
 .testimonial-text {
@@ -387,6 +385,8 @@ h5 {
 p.text-muted {
   color: #bbb; /* Muted grey for author job title */
 }
+
+
 
 /* Responsive (TestimonialsMobile) */
 
@@ -657,7 +657,7 @@ p.text-muted {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease-in-out;
-  z-index:2;
+  z-index: 2;
 }
 
 /* Hover effect */
