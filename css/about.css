@@ -136,6 +136,13 @@
 
 /* Team Section */
 
+.teamGroup
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .team-section h2 {
   color: #00acd5;
 }

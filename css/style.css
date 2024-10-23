@@ -108,6 +108,7 @@ h5 {
 .carousel-item.active {
   opacity: 1; /* Show active item */
   display: block; /* Show active item */
+  
 }
 
 .carousel-caption {
@@ -122,6 +123,7 @@ h5 {
   padding: 10px; /* Optional: padding for text */
   opacity: 0; /* Start invisible */
   transition: opacity 1.5s ease-in-out; /* Fade transition */
+
 }
 
 .carousel-caption.show {
@@ -233,8 +235,8 @@ h5 {
 /* About Us */
 
 .about-us {
-  padding: 40px 20px;
-  background-color: #fffde7; /* Light background for contrast */
+  padding: 60px 20px;
+  background-color: #FAFAFA; /* Light background for contrast */
   color: black;
 }
 
