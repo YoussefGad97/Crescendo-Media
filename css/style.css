@@ -108,7 +108,6 @@ h5 {
 .carousel-item.active {
   opacity: 1; /* Show active item */
   display: block; /* Show active item */
-  
 }
 
 .carousel-caption {
@@ -123,7 +122,6 @@ h5 {
   padding: 10px; /* Optional: padding for text */
   opacity: 0; /* Start invisible */
   transition: opacity 1.5s ease-in-out; /* Fade transition */
-
 }
 
 .carousel-caption.show {
@@ -236,7 +234,7 @@ h5 {
 
 .about-us {
   padding: 60px 20px;
-  background-color: #FAFAFA; /* Light background for contrast */
+  background-color: #fafafa; /* Light background for contrast */
   color: black;
 }
 
@@ -342,53 +340,56 @@ h3 {
   line-height: 1.6; /* Improve readability with line height */
 }
 
-/* Testimonials */
+/* Counter */
 
-#testimonialCarousel {
-  background-color: #000; /* Black background for the carousel section */
-  padding: 50px 20px; /* #00acd5uce spacing on the sides, especially for smaller screens */
-  color: white; /* Ensure all text in the carousel is white for contrast */
-  
+.counter-section {
+  background: url("../images/Project1.jpg") no-repeat center center/cover;
+  position: relative;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  background-attachment: fixed;
 }
 
-.testimonial-text {
-  font-style: italic;
-  color: #ccc; /* Lighter grey color for the text */
-  margin: 0 auto;
-  max-width: 90%; /* Ensure testimonial text does not stretch too wide */
+.counter-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Black shade overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
-img.rounded-circle {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  margin-top: 20px;
+.counter-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
 
-.carousel-indicators button {
-  background-color: #ccc; /* Grey color for inactive indicators */
+.counter-box {
+  margin: 30px;
 }
 
-.carousel-indicators .active {
-  background-color: #00acd5; /* #00acd5 for active indicator */
-}
-
-h2 {
-  color: #00acd5; /* #00acd5 color for the headers */
-  font-weight: bold; /* Make headers bold */
+.counter-box h2 {
   font-size: 2rem;
-}
-
-h5 {
-  color: #00acd5; /* #00acd5 color for the testimonial author name */
   font-weight: bold;
 }
 
-p.text-muted {
-  color: #bbb; /* Muted grey for author job title */
+.counter-box i {
+  font-size: 3em;
+  color: white;
+  padding: 1.5rem;
 }
 
-
+.counter-title {
+  color: white;
+  font-size: 24px;
+  margin-top: 10px;
+}
 
 /* Responsive (TestimonialsMobile) */
 

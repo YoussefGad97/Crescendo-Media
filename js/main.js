@@ -120,3 +120,33 @@ backToTopButton.addEventListener("click", function () {
   });
 });
 
+// Counter
+
+// Counter animation
+const counters = document.querySelectorAll(".counter");
+let counterSection = document.querySelector("#counter-section");
+let started = false;
+
+window.addEventListener("scroll", function () {
+  const sectionPos = counterSection.getBoundingClientRect().top;
+  const screenPos = window.innerHeight / 1.5;
+
+  if (!started && sectionPos < screenPos) {
+    counters.forEach((counter) => {
+      const updateCount = () => {
+        const target = +counter.getAttribute("data-target");
+        const count = +counter.innerText;
+        const increment = target / 100;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+    started = true;
+  }
+});
