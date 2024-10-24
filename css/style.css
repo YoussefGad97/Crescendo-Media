@@ -34,7 +34,7 @@ h5 {
 
 .navbar-brand {
   font-size: 1.5rem;
-  color: #c1e8ff ;
+  color: #c1e8ff;
   font-weight: bold;
 }
 
@@ -85,7 +85,7 @@ h5 {
   border-top: 2px solid #021024; /* Optional: add border to the top of the carousel */
 }
 
-.carouselBtnMob {
+.carouselBtnMob .carouselBtn {
   background-color: transparent;
   border: transparent;
 }
@@ -98,7 +98,7 @@ h5 {
   height: 100%; /* Ensures the image takes up the full height of the carousel */
   width: fit-content; /* Adjust width proportionally */
   object-fit: cover; /* Ensures the image covers the area without distortion */
-  filter:brightness(0.7)
+  filter: brightness(0.7);
 }
 
 .carousel-item {
@@ -115,20 +115,68 @@ h5 {
 
 .carousel-caption {
   position: absolute;
-  top: 60%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust position */
-  color: #c1e8ff; /* Text color */
-  text-align: center; /* Center text alignment */
-  font-weight: bold; /* Make text bold */
-  font-size: 2.5rem; /* Adjust font size for header (you can change this value) */
-  padding: 10px; /* Optional: padding for text */
-  opacity: 0; /* Start invisible */
-  transition: opacity 1.5s ease-in-out; /* Fade transition */
+  bottom: 30%;
+  left: 30%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #c1e8ff;
 }
 
 .carousel-caption.show {
   opacity: 1; /* Show caption */
+}
+
+/* Card Text Animation */
+
+.carousel-caption p {
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: white; /* Default color for fully typed text */
+  opacity: 1;
+}
+
+.carousel-control-prev{
+  color:transparent;
+  text-decoration: none;
+  background-color: transparent;
+  border:0px transparent;
+}
+
+.carousel-control-next{
+  color:transparent;
+  text-decoration: none;
+  background-color: transparent;
+  border:0px transparent;
+
+}
+
+
+
+
+.typed-text span {
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+span.active {
+  color: #c1e8ff; /* Color for active typing letter */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0; /* Make the buttons invisible but still clickable */
+  pointer-events: auto; /* Ensure they remain clickable */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 0; /* Make them visible on hover */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none; /* Remove the arrow icons entirely */
 }
 
 /* Resposnsive For Mobile (HomeMobile)*/
@@ -238,12 +286,11 @@ h5 {
 .about-us {
   padding: 60px 20px;
   background-color: #c1e8ff; /* Light background for contrast */
-  color:#021024;
+  color: #021024;
 }
 
-.abt-text
-{
-  font-size:1.3rem;
+.abt-text {
+  font-size: 1.3rem;
 }
 
 #about-us h2,
@@ -305,7 +352,7 @@ h3 {
   .about-us {
     padding: 40px 20px;
     background-color: #c1e8ff; /* Light background for contrast */
-    color: #021024 ;
+    color: #021024;
   }
 
   #about-us h2,
