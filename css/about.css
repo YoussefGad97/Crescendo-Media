@@ -1,3 +1,19 @@
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #7da0ca;
+  font-weight: 600;
+}
+
 /* NavBar */
 /* Navbar styling */
 .navbar {
@@ -17,20 +33,20 @@
 
 .navbar-brand {
   font-size: 1.5rem;
-  color: white;
+  color: #c1e8ff;
   font-weight: bold;
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: white; /* White nav items */
+  color: #c1e8ff; /* White nav items */
   margin-right: 20px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #00acd5; /* Lighter color on hover */
+  color: #7da0ca; /* Lighter color on hover */
 }
 
 /* Active link styling */
@@ -61,17 +77,21 @@
   }
 }
 
-/* AboutUS */
+/* About Us Section*/
 
 .about-us {
   padding-top: 10rem;
-  color: white; /* Text color */
+  color: #c1e8ff; /* Text color */
   position: relative;
-  background-image: url("../images/AboutUs.jpg"); /* Replace with your image */
-  background-size: contain;
+  background-image: url("../images/Aboutus2.jpg"); /* Replace with your image */
+  background-size: cover;
   background-position: center;
-  height: 100vh; /* Adjust based on your needs */
+  background-repeat: no-repeat;
+  height: 80vh; /* Adjust based on your needs */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow to the section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-us::before {
   content: "";
@@ -87,23 +107,26 @@
 .about-us .content {
   position: relative;
   z-index: 2; /* Ensures the content is above the overlay */
-  color: white; /* Adjust text color as needed */
+  color: #c1e8ff; /* Adjust text color as needed */
   text-align: center;
   padding: 50px; /* Adjust padding based on design */
 }
 
 .about-us h2 {
-  color: #00acd5; /* Heading color */
+  color: #7da0ca; /* Heading color */
   font-size: 2.5rem;
   font-weight: bolder;
   margin-bottom: 20px;
 }
 
 .about-us p {
-  font-size: 1rem;
   font-weight: 400;
-  color: white;
+  color: #c1e8ff;
   width: 100%;
+}
+
+.aboutP {
+  font-size: 1.5rem;
 }
 
 .about-box:hover p {
@@ -124,11 +147,11 @@
 .about-box:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
-  background-color: #f6e3ba;
+  background-color: #c1e8ff;
 }
 
 .about-box h3 {
-  color: #00acd5;
+  color: #7da0ca;
   font-size: 1.5rem;
   font-weight: bolder;
   margin-bottom: 15px;
@@ -136,19 +159,22 @@
 
 /* Team Section */
 
-.teamGroup
-{
-  display:flex;
+#team {
+  margin-top: 5rem;
+}
+
+.teamGroup {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .team-section h2 {
-  color: #00acd5;
+  color: #7da0ca;
 }
 
 .team-section p {
-  color: white;
+  color: #c1e8ff;
   font-size: 1.5rem;
 }
 
@@ -174,7 +200,7 @@
 .title h2 {
   font-family: "Poppins", sans-serif;
   font-size: 5rem;
-  color: #f2f2f2;
+  color: #c1e8ff;
   padding-bottom: 2rem;
 }
 
@@ -186,26 +212,8 @@
 
 .title p {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  color: #999999;
-}
-
-.mgn {
-  margin-top: 7rem;
-  margin-bottom: 10rem;
-}
-
-.mgn2 {
-  margin-bottom: 1.3rem;
-}
-
-.mgn3 {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-}
-
-.mgn5 {
-  margin-top: 2rem;
+  font-size: 1.3em;
+  color: #052659;
 }
 
 .links {
@@ -225,38 +233,17 @@
   font-size: 13px;
 }
 
-.fontsz {
-  font-size: 30px;
-}
-
-.fontsz2 {
-  font-size: 1.3rem;
-}
-
-.fontsz3 {
-  font-size: 1.5625rem;
-}
-
-.fontsz4 {
-  font-size: 0.875rem;
-  color: #b0b0b0;
-}
-
-.fontsz6 {
-  font-size: 4rem;
-}
-
-.details h3 {
-  font-size: 18px;
-}
+/* Services */
 
 #services i {
-  color: red;
-  font-size: 25px;
+  color: #c1e8ff;
+  font-size: 1em;
 }
 
 #services {
-  background-color: #fafafa;
+  background-color: #021024;
+  font-size: 1.3rem;
+  font-weight: 300;
 }
 
 .wdth {
@@ -284,7 +271,7 @@
 
 .footer {
   background: #222222;
-  color: white;
+  color: #c1e8ff;
 }
 
 .anim {
@@ -310,7 +297,7 @@
 }
 
 .header .btn-cst {
-  border: 1px solid white;
+  border: 1px solid #c1e8ff;
 }
 
 .header button:hover {
@@ -337,7 +324,7 @@
 }
 
 #team .member:hover .member-details h5 {
-  color: #00acd5;
+  color: #7da0ca;
   transition: 0.5s;
 }
 
@@ -346,12 +333,12 @@
 }
 
 #team .member .member-img:hover .links a i {
-  color: white;
+  color: #c1e8ff;
   transition: all 1s;
 }
 
 .links {
-  color: white;
+  color: #c1e8ff;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -376,7 +363,7 @@
   width: 100%;
   opacity: 0;
   transition: 0.9s ease;
-  background-color: #00acd5;
+  background-color: #7da0ca;
 }
 
 .member-img:hover img {
@@ -409,8 +396,8 @@
   bottom: 20px;
   right: 20px;
   display: none; /* Hidden initially */
-  background-color: #00acd5; /* blue background */
-  color: #ffffff; /* White text */
+  background-color: #7da0ca; /* blue background */
+  color: #ffffff; /* #C1E8FF text */
   border: none;
   border-radius: 50%;
   padding: 15px;
@@ -495,7 +482,7 @@
 }
 
 .call-to-action h2 {
-  color: white;
+  color: #c1e8ff;
   font-size: 2.5rem;
   font-weight: bold;
 }
@@ -509,7 +496,7 @@
 }
 
 .overlay-text h2 {
-  color: white;
+  color: #c1e8ff;
   font-size: 36px;
   font-weight: bold;
 }
@@ -587,17 +574,17 @@
 
 .services {
   padding: 5rem 0; /* Vertical padding for the section */
-  background-color: #f8f9fa; /* Light background for contrast */
+  background-color: white; /* Light background for contrast */
 }
 
 .services h2 {
   font-size: 2.5rem; /* Title size */
   margin-bottom: 2rem; /* Space below title */
-  color: #00acd5; /* Title color */
+  color: #7da0ca; /* Title color */
 }
 
 .service-card {
-  background-color: white; /* Card background */
+  background-color: #5483b3; /* Card background */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Card shadow */
   padding: 1.5rem; /* Padding inside cards */
@@ -614,16 +601,18 @@
 .icon {
   font-size: 3rem; /* Icon size */
   margin-bottom: 1rem; /* Space below icon */
-  color: #00acd5; /* Icon color */
+  color: #c1e8ff; /* Icon color */
 }
 
 .service-card h3 {
   font-size: 1.5rem; /* Service title size */
   margin-bottom: 0.5rem; /* Space below title */
+  color: #c1e8ff;
 }
 
 .service-card p {
   line-height: 1.6; /* Improved line height for readability */
+  color: #c1e8ff;
 }
 
 /* Responsive styles */
@@ -644,17 +633,17 @@
 .footer h5 {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #00acd5; /* Heading color */
+  color: #7da0ca; /* Heading color */
 }
 
 .footer p,
 .footer a {
   font-size: 1rem;
-  color: #f6e3ba; /* Text and link color */
+  color: #7da0ca; /* Text and link color */
 }
 
 .footer .social-icons a {
-  color: #f6e3ba;
+  color: #7da0ca;
   margin-right: 15px;
   transition: color 0.3s ease-in-out;
 }
@@ -664,7 +653,7 @@
 }
 
 .footer a:hover {
-  color: #00acd5; /* Link hover color */
+  color: #7da0ca; /* Link hover color */
 }
 
 .footer ul {
@@ -677,12 +666,12 @@
 }
 
 .footer ul li a {
-  color: #f6e3ba; /* Link color */
+  color: #7da0ca; /* Link color */
   text-decoration: none;
 }
 
 .footer ul li a:hover {
-  color: #00acd5;
+  color: #7da0ca;
 }
 
 @media (max-width: 768px) {
@@ -697,11 +686,11 @@
 }
 
 .footer ul li a {
-  color: #f6e3ba; /* Initial link color */
+  color: #7da0ca; /* Initial link color */
   text-decoration: none;
   transition: color 0.3s ease-in-out; /* Smooth transition */
 }
 
 .footer ul li a:hover {
-  color: #00acd5 !important; /* Hover color with !important to enforce the style */
+  color: #7da0ca !important; /* Hover color with !important to enforce the style */
 }
