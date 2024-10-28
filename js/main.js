@@ -209,3 +209,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Pro Display Section
+
+document.addEventListener("DOMContentLoaded", function () {
+  const professionalismSection = document.getElementById(
+    "professionalism-section"
+  );
+
+  function fadeInSection() {
+    const sectionPos = professionalismSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.3;
+
+    if (sectionPos < screenPos) {
+      professionalismSection.classList.add("fade-in");
+    }
+  }
+
+  window.addEventListener("scroll", fadeInSection);
+});

@@ -50,13 +50,13 @@ body {
   color: #00acd5; /* Text header color */
   margin-bottom: 25px;
   font-weight: Bold;
-  font-size:2rem;
+  font-size: 2rem;
 }
 
 .project-content ul li {
   color: #333;
   line-height: 1.6;
-  padding-bottom:0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -71,6 +71,78 @@ body {
   .project-content {
     text-align: center;
   }
+}
+
+/* Projects Slider */
+
+#projectsGallery .carousel-item {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #c1e8ff; /* Title color */
+}
+
+#projectsGallery .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 16, 36, 0.8); /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: #c1e8ff; /* Text color */
+  text-align: center;
+  padding: 2rem;
+}
+
+#projectsGallery .carousel-item:hover .overlay {
+  opacity: 1;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00acd5; /* Title color */
+}
+
+.project-techniques {
+  font-size: 1.2rem;
+  color: #c1e8ff; /* Techniques text color */
+}
+
+/* Make carousel control buttons transparent */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust width to position closer to edges */
+  background: transparent;
+  border: none;
+}
+
+/* Customize the arrow icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent; /* Make background transparent */
+  background-size: 40px 40px; /* Size of the arrow icons */
+  filter: invert(1); /* Makes the icon white; adjust if needed */
+  opacity: 0.7; /* Make the icon slightly transparent */
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect to make the arrows glow with #00acd5 */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  opacity: 1;
+  filter: invert(39%) sepia(94%) saturate(492%) hue-rotate(169deg)
+    brightness(95%) contrast(101%);
 }
 
 /* NavBar */
@@ -164,6 +236,65 @@ body {
   color: #00acd5;
   font-size: 3rem;
   font-weight: Bolder;
+}
+
+/* Pro Section */
+
+/* Professionalism Section Styles */
+#professionalism-section {
+  background-color: #021024; /* Dark background for contrast */
+  color: #c1e8ff; /* Light text color for readability */
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00acd5;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #7da0ca;
+}
+
+.expertise-card {
+  background-color: #052659;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  margin: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 4px 20px rgba(0, 172, 213, 0.3); /* Hover shadow effect */
+}
+
+.expertise-icon {
+  font-size: 2.5rem;
+  color: #00acd5;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #professionalism-section {
+    padding: 3rem 1rem;
+  }
+}
+
+#professionalism-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#professionalism-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Call To Action */
