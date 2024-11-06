@@ -228,3 +228,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", fadeInSection);
 });
+
+// Projects sliders
+
+document.addEventListener("DOMContentLoaded", function () {
+  const projectBlocks = document.querySelectorAll(".project-block");
+  let lastScrollTop = window.pageYOffset;
+
+  function handleScroll() {
+    let scrollTop = window.pageYOffset;
+    let scrollDown = scrollTop > lastScrollTop;
+
+    projectBlocks.forEach((block) => {
+      const rect = block.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Apply the "visible" class only when scrolling down and in the viewport
+      if (scrollDown && rect.top < windowHeight && rect.bottom >= 0) {
+        block.classList.add("visible");
+      }
+    });
+
+    lastScrollTop = scrollTop;
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // Initial call to handle elements in the viewport on load
+});

@@ -14,6 +14,7 @@ h5 {
 }
 
 /* NavBar */
+
 /* Navbar styling */
 .navbar {
   background-color: rgba(0, 0, 0, 0.5); /* Primary background color */
@@ -78,9 +79,27 @@ h5 {
 
 /* Projects */
 
+/* Initial hidden state */
+.project-block {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state */
+.project-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .projects-section {
-  background-color: black; /* Section background color */
+  background-color: #021024; /* Section background color */
   padding: 50px 0;
+}
+
+#projects h2 {
+  color: #7da0ca;
+  font-weight: 600;
 }
 
 .container {
@@ -117,14 +136,14 @@ h5 {
 }
 
 .project-content h2 {
-  color: #00acd5; /* Text header color */
+  color: #5483b3; /* Text header color */
   margin-bottom: 25px;
   font-weight: Bold;
   font-size: 2rem;
 }
 
 .project-content ul li {
-  color: #333;
+  color: #021024;
   line-height: 1.6;
   padding-bottom: 0.5rem;
 }
@@ -181,7 +200,7 @@ h5 {
 .project-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #00acd5; /* Title color */
+  color: #c1e8ff; /* Title color */
 }
 
 .project-techniques {
@@ -517,25 +536,25 @@ h5 {
 /* Footer */
 
 .footer {
-  background-color: black; /* Dark background */
-  color: #fff;
+  background-color: #021024; /* Dark background */
+  color: #c1e8ff;
   padding: 50px 0;
 }
 
 .footer h5 {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #00acd5; /* Heading color */
+  color: #c1e8ff; /* Heading color */
 }
 
 .footer p,
 .footer a {
   font-size: 1rem;
-  color: #f6e3ba; /* Text and link color */
+  color: #c1e8ff; /* Text and link color */
 }
 
 .footer .social-icons a {
-  color: #f6e3ba;
+  color: #c1e8ff;
   margin-right: 15px;
   transition: color 0.3s ease-in-out;
 }
@@ -545,7 +564,7 @@ h5 {
 }
 
 .footer a:hover {
-  color: #00acd5; /* Link hover color */
+  color: #052659; /* Link hover color */
 }
 
 .footer ul {
@@ -558,12 +577,12 @@ h5 {
 }
 
 .footer ul li a {
-  color: #f6e3ba; /* Link color */
+  color: #c1e8ff; /* Link color */
   text-decoration: none;
 }
 
 .footer ul li a:hover {
-  color: #00acd5;
+  color: #052659;
 }
 
 @media (max-width: 768px) {
@@ -584,7 +603,7 @@ h5 {
 }
 
 .footer ul li a:hover {
-  color: #00acd5 !important; /* Hover color with !important to enforce the style */
+  color: #052659 !important; /* Hover color with !important to enforce the style */
 }
 
 /* Initial state for fade-section */
