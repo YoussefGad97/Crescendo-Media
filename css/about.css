@@ -11,7 +11,6 @@ h3,
 h4,
 h5 {
   color: #7da0ca;
-  font-weight: 600;
 }
 
 /* NavBar */
@@ -40,7 +39,7 @@ h5 {
 .navbar-nav .nav-item .nav-link {
   color: #c1e8ff; /* White nav items */
   margin-right: 20px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   transition: color 0.3s;
 }
