@@ -255,3 +255,44 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleScroll);
   handleScroll(); // Initial call to handle elements in the viewport on load
 });
+
+// Services Cards
+$(document).ready(function () {
+  $(".slick-carousel").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true, // Optional: shows navigation arrows
+    dots: true, // Optional: shows dots for navigation
+    autoplay: true, // Optional: enables autoplay
+    autoplaySpeed: 2000, // Optional: controls autoplay speed
+  });
+});
+
+$(document).ready(function () {
+  $(".slick-carousel").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+});
+
+AOS.init({
+  duration: 1200, // Duration of the animation
+});

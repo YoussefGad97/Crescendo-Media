@@ -80,14 +80,14 @@ h5 {
 
 .servicesHomePage {
   padding-top: 10rem;
-  color: white; /* Text color */
+  color: white;
   position: relative;
-  background-image: url("../images/services.jpg"); /* Replace with your image */
+  background-image: url("../images/services.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70vh; /* Adjust based on your needs */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow to the section */
+  height: 70vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .servicesHomePage::before {
@@ -97,8 +97,8 @@ h5 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay (shade) */
-  z-index: 1; /* Keeps the overlay above the background image */
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .servicesHomePage p {
@@ -107,7 +107,7 @@ h5 {
 
 .catchP {
   font-size: 1.7rem;
-  color: #00acd5;
+  color: #5483b3;
 }
 
 .servicesHomePage h2 {
@@ -117,23 +117,14 @@ h5 {
 
 .services-section {
   padding: 5rem 0;
-  background-color: #ffffff;
+  background-color: #c1e8ff;
 }
 
 h2 {
-  color: #00acd5;
+  color: #5483b3;
   margin-bottom: 2rem;
   font-weight: bold;
   font-size: 2.5rem;
-}
-
-.services-section {
-  padding: 5rem 0;
-}
-
-h2 {
-  color: #00acd5;
-  margin-bottom: 2rem;
 }
 
 /* Service Card */
@@ -141,17 +132,28 @@ h2 {
 .service-card {
   display: flex;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
   overflow: hidden;
   padding: 1.5rem;
+  margin: 1rem; /* Ensure proper spacing between cards */
+  width: 100%;
+  max-width: 500px; /* Maximum width of cards */
+  flex-grow: 1; /* Allow cards to grow within their container */
+}
+
+.service-Collection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 2rem; /* Adds spacing between cards */
 }
 
 .image-carousel {
-  flex: 0 0 40%; /* Adjusts the width of the carousel side */
-  position: relative; /* Allows child elements to be positioned absolutely */
-  height: 250px; /* Set height for carousel area */
+  flex: 0 0 40%;
+  position: relative;
+  height: 250px;
   border-radius: 8px 0 0 8px;
   overflow: hidden;
 }
@@ -185,14 +187,14 @@ h2 {
 }
 
 .service-info h3 {
-  color: #00acd5;
+  color: #5483b3;
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1.7rem;
 }
 
 .service-info p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: black;
   line-height: 1.5;
 }
@@ -200,12 +202,26 @@ h2 {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .service-card {
-    flex-direction: column;
+    flex-direction: column; /* Stack the content on mobile */
+    width: 100%; /* Ensure cards take full width on mobile */
   }
 
   .image-carousel {
-    flex: none;
     width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .service-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .service-info p {
+    font-size: 0.8rem;
+  }
+
+  .servicesHomePage {
+    height: 50vh; /* Adjust height for mobile */
   }
 }
 
@@ -460,9 +476,9 @@ p.text-muted {
   background-color: #00acd5; /* blue background */
   color: #ffffff; /* White text */
   border: none;
-  border-radius:40%;
+  border-radius: 40%;
   font-size: 10px;
-  padding:5px;
+  padding: 5px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease-in-out;
