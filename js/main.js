@@ -152,60 +152,25 @@ window.addEventListener("scroll", function () {
 });
 
 // Home Caption Animation
-
 document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.getElementById("carouselExampleFade");
-  const captions = document.querySelectorAll(".typed-text");
+  // Select all elements with class 'caption'
+  const captions = document.querySelectorAll(".carousel-caption p");
 
-  // Function to start typing animation
-  function typeEffect(element, text) {
-    let index = 0;
-    const interval = 80; // typing speed in ms
-    let html = "";
-
-    function type() {
-      if (index < text.length) {
-        if (text[index] === " ") {
-          html += `<span class="space">&nbsp;</span>`; // Treat space as &nbsp;
-        } else {
-          html += `<span class="active">${text[index]}</span>`;
-        }
-
-        element.innerHTML = html;
-
-        const spans = element.querySelectorAll("span");
-        if (spans.length > 1 && text[index] !== " ") {
-          spans[spans.length - 2].classList.remove("active");
-          spans[spans.length - 2].style.color = "#C1E8FF"; // Change color of previous letter
-        }
-
-        index++;
-        setTimeout(type, interval);
-      } else {
-        // Once the full text is typed, ensure all spans are colored
-        const allSpans = element.querySelectorAll("span");
-        allSpans.forEach((span) => (span.style.color = "white"));
-      }
-    }
-
-    type();
-  }
-
-  // Start the typing effect on the active caption when the page loads
   captions.forEach((caption) => {
-    const text = caption.getAttribute("data-text");
-    if (caption.closest(".carousel-item").classList.contains("active")) {
-      typeEffect(caption, text);
-    }
-  });
+    const text = caption.innerText; // Get the full text
+    const words = text.split(" "); // Split the text into words
+    caption.innerHTML = ""; // Clear the caption content
 
-  // Listen for slide change events
-  carousel.addEventListener("slid.bs.carousel", function () {
-    captions.forEach((caption) => {
-      const text = caption.getAttribute("data-text");
-      if (caption.closest(".carousel-item").classList.contains("active")) {
-        typeEffect(caption, text); // Trigger typing animation on active slide
-      }
+    // Loop through the words and wrap each one in a <span> with delay
+    words.forEach((word, index) => {
+      const span = document.createElement("span"); // Create a span for each word
+      span.innerText = word;
+
+      // Set a delay for each word's animation (increasing delay per word)
+      span.style.setProperty("--delay", `${index * 0.1}s`);
+
+      caption.appendChild(span); // Append the word span
+      caption.appendChild(document.createTextNode(" ")); // Add a space after each word
     });
   });
 });

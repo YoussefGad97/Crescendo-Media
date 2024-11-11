@@ -624,26 +624,27 @@ h5 {
 }
 
 /* Footer */
+
 .footer {
-  background-color: black; /* Dark background */
-  color: #fff;
+  background-color: #021024; /* Dark background */
+  color: #c1e8ff;
   padding: 50px 0;
 }
 
 .footer h5 {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #7da0ca; /* Heading color */
+  color: #c1e8ff; /* Heading color */
 }
 
 .footer p,
 .footer a {
   font-size: 1rem;
-  color: #7da0ca; /* Text and link color */
+  color: #c1e8ff; /* Text and link color */
 }
 
 .footer .social-icons a {
-  color: #7da0ca;
+  color: #c1e8ff;
   margin-right: 15px;
   transition: color 0.3s ease-in-out;
 }
@@ -653,7 +654,7 @@ h5 {
 }
 
 .footer a:hover {
-  color: #7da0ca; /* Link hover color */
+  color: #052659; /* Link hover color */
 }
 
 .footer ul {
@@ -666,12 +667,12 @@ h5 {
 }
 
 .footer ul li a {
-  color: #7da0ca; /* Link color */
+  color: #c1e8ff; /* Link color */
   text-decoration: none;
 }
 
 .footer ul li a:hover {
-  color: #7da0ca;
+  color: #052659;
 }
 
 @media (max-width: 768px) {
@@ -686,7 +687,77 @@ h5 {
 }
 
 .footer ul li a {
-  color: #7da0ca; /* Initial link color */
+  color: #f6e3ba; /* Initial link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer ul li a:hover {
+  color: #052659 !important; /* Hover color with !important to enforce the style */
+}
+
+/* Initial state for fade-section */
+.fade-section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/*  back to the top button */
+
+/* Style for the back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden initially */
+  background-color: #00acd5; /* blue background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  opacity: 0.8;
+}
+
+/* Responsive: Adjust the button's size on smaller screens */
+@media (max-width: 600px) {
+  .back-to-top {
+    padding: 10px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  opacity: 0.8;
+}
+
+/* Responsive: Adjust the button's size on smaller screens */
+@media (max-width: 600px) {
+  .back-to-top {
+    padding: 10px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+.footer ul li a {
+  color: #f6e3ba; /* Initial link color */
   text-decoration: none;
   transition: color 0.3s ease-in-out; /* Smooth transition */
 }

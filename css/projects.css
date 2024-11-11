@@ -650,3 +650,13 @@ h5 {
     right: 15px;
   }
 }
+
+.footer ul li a {
+  color: #f6e3ba; /* Initial link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer ul li a:hover {
+  color: #7da0ca !important; /* Hover color with !important to enforce the style */
+}

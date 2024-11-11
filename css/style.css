@@ -41,7 +41,7 @@ h5 {
 .navbar-nav .nav-item .nav-link {
   color: #c1e8ff; /* White nav items */
   margin-right: 20px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -80,9 +80,69 @@ h5 {
 
 /* HomePage */
 
+/* Ensure the control buttons are invisible by default */
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+  background-color: transparent; /* Make the background transparent */
+  border: none; /* Remove border */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1; /* Make buttons visible when hovering over the carousel */
+}
+
+/* Optional: adjust the size and position of the control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust width as needed */
+  height: 100%; /* Ensure the buttons cover the full height of the carousel */
+  position: absolute;
+  top: 0;
+  z-index: 2; /* Ensure the buttons appear on top of the images */
+}
+
+.carousel-control-prev {
+  left: 0; /* Position on the left side */
+}
+
+.carousel-control-next {
+  right: 0; /* Position on the right side */
+}
+
+/* Optional: Style the arrow icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 50%; /* Make the arrow background round */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #c1e8ff;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+}
+
+.carousel-caption.show {
+  opacity: 1; /* Show caption */
+}
+
 .carousel {
   overflow: hidden; /* Prevent horizontal scrollbar */
   border-top: 2px solid #021024; /* Optional: add border to the top of the carousel */
+  
 }
 
 .carouselBtnMob .carouselBtn {
@@ -102,7 +162,7 @@ h5 {
 }
 
 .carousel-item {
-  transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+  transition: opacity 1s ease-in-out; /* Smooth opacity transition */
   opacity: 0; /* Initially hidden */
   display: none; /* Hide non-active items */
   font-family: Arial, Helvetica, sans-serif;
@@ -115,11 +175,13 @@ h5 {
 
 .carousel-caption {
   position: absolute;
-  bottom: 30%;
-  left: 30%;
+  bottom: 35%;
+  left: 50%;
   transform: translateX(-50%);
   text-align: center;
   color: #c1e8ff;
+  width: 80%;  /* Default width */
+  max-width: 800px;
 }
 
 .carousel-caption.show {
@@ -128,38 +190,70 @@ h5 {
 
 /* Card Text Animation */
 
+/* Add the bounce animation to the words */
+/* Add the bounce animation to the words */
+@keyframes bounceIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1; /* Ensure opacity stays at 1 */
+  }
+}
+
+/* Ensure the words in captions are inline-block for animation */
+.caption span {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1.2s ease-out forwards;
+  animation-delay: var(--delay);
+  animation-fill-mode: forwards; /* Ensure the element stays in the final state of the animation */
+}
+
 .carousel-caption p {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: white; /* Default color for fully typed text */
   opacity: 1;
 }
 
-.carousel-control-prev{
-  color:transparent;
-  text-decoration: none;
-  background-color: transparent;
-  border:0px transparent;
+.caption {
+  word-wrap: break-word;
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 0.8s ease-out forwards;
+  animation-delay: var(--delay);
 }
 
-.carousel-control-next{
-  color:transparent;
+.carousel-control-prev {
+  color: transparent;
   text-decoration: none;
   background-color: transparent;
-  border:0px transparent;
-
+  border: 0px transparent;
 }
 
-
-
+.carousel-control-next {
+  color: transparent;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0px transparent;
+}
 
 .typed-text span {
   display: inline-block;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.4s ease-in-out;
+  width: max-content;
 }
 
 span.active {
-  color: #c1e8ff; /* Color for active typing letter */
+  color: #c1e8ff;
+  transition: color 0.5s ease-in-out; /* Increased duration */
 }
 
 .carousel-control-prev,
@@ -398,7 +492,7 @@ h3 {
 /* Counter */
 
 .counter-section {
-  background: url("../images/Project1.jpg") no-repeat center center/cover;
+  background: url("../images/counterbg.jpg") no-repeat center center/cover;
   position: relative;
   color: #c1e8ff;
   padding: 20px 0;
@@ -630,17 +724,17 @@ h3 {
 .footer h5 {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #7da0ca; /* Heading color */
+  color: #c1e8ff; /* Heading color */
 }
 
 .footer p,
 .footer a {
   font-size: 1rem;
-  color: #f6e3ba; /* Text and link color */
+  color: #c1e8ff; /* Text and link color */
 }
 
 .footer .social-icons a {
-  color: #f6e3ba;
+  color: #c1e8ff;
   margin-right: 15px;
   transition: color 0.3s ease-in-out;
 }
@@ -650,7 +744,7 @@ h3 {
 }
 
 .footer a:hover {
-  color: #7da0ca; /* Link hover color */
+  color: #052659; /* Link hover color */
 }
 
 .footer ul {
@@ -663,12 +757,12 @@ h3 {
 }
 
 .footer ul li a {
-  color: #f6e3ba; /* Link color */
+  color: #c1e8ff; /* Link color */
   text-decoration: none;
 }
 
 .footer ul li a:hover {
-  color: #7da0ca;
+  color: #052659;
 }
 
 @media (max-width: 768px) {
@@ -679,6 +773,61 @@ h3 {
 
   .footer .social-icons {
     justify-content: center; /* Center social icons */
+  }
+}
+
+.footer ul li a {
+  color: #f6e3ba; /* Initial link color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer ul li a:hover {
+  color: #052659 !important; /* Hover color with !important to enforce the style */
+}
+
+/* Initial state for fade-section */
+.fade-section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/*  back to the top button */
+
+/* Style for the back-to-top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden initially */
+  background-color: #00acd5; /* blue background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  opacity: 0.8;
+}
+
+/* Responsive: Adjust the button's size on smaller screens */
+@media (max-width: 600px) {
+  .back-to-top {
+    padding: 10px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
   }
 }
 
