@@ -1,0 +1,44 @@
+[33m6302ed4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m 11/12/2024 3:43PM
+[33mca9334d[m (no commit message provided)
+[33m013efbf[m style: Restructure footer for mobile view
+[33m10f3c91[m style: Make footer lists side-by-side on mobile
+[33mf01652e[m style: Adjust counter section for mobile responsiveness
+[33maa2b23c[m style: Set about us card background to white on mobile
+[33m83d9a2f[m style: Adjust carousel caption size for mobile
+[33me3a4165[m fix: Prevent navbar overlap on mobile homepage
+[33m30c2cbf[m style: Make mobile navbar transparent, hamburger icon white
+[33m5573296[m style: Constrain navbar logo size for responsiveness
+[33mf941fbb[m style: Adjust navbar logo size and hamburger icon
+[33m5b7dd54[m style: Improve back-to-top button styling on mobile
+[33m49db37a[m feat: Improve carousel responsiveness and accessibility
+[33m143559f[m fix: Fix carousel flashing on transition
+[33ma5b5f5d[m fix: Fix carousel white flash and add fade transition
+[33m9df177e[m fix: Make navbar sticky and fix nested collapse issue
+[33ma4a7b16[m fix: Fix navbar logo and hamburger menu display in mobile view
+[33m239eb87[m style: Add semi-transparent dark background to navbar
+[33mb317e4a[m feat: Update navbar to be mobile friendly using Bootstrap 5.
+[33m44a3bc6[m 11/11/2024 3:23PM
+[33m1b5b82f[m 11/11/2024 12:23PM
+[33m86fdba0[m 11/11/2024 10:55AM
+[33m0ae1ab8[m 06/11/2024 4:07PM
+[33m7028239[m fix: Update CSS styles for navbar and body.
+[33m4bd6a15[m docs: Update heading color and font in Projects.html.
+[33m70829f3[m fix: Update "Our Projects" font-size to 2rem in projects.htm.
+[33m47ceabb[m fix: Update "Our Projects" font-size to 1.2rem.
+[33m8e14b47[m fix: Update navbar HTML in index.html
+[33ma02336c[m fix: Change "Our Projects" header color to #7DA0CA.
+[33m1e7334a[m fix: Update fonts to use Google fonts for Roboto and Poppins.
+[33me65de75[m fix: Remove unnecessary font links from index.html.
+[33m4818a62[m 28/10/2024 6:27PM
+[33m15c78d2[m 26/10/2024 12:20PM
+[33mf00208e[m 24/10/2024 4:45PM
+[33mf6d9777[m 24/10/2024 3:15PM
+[33m4b1b72d[m 24/10/2024
+[33m840a870[m 23/10/2024
+[33m9107988[m 23/10/2024
+[33m2d95bb1[m 22/10/2024
+[33mfdadabb[m 21/10/2024
+[33mb3f6fcf[m 21/10/2024
+[33m69bfccf[m 21/10/2024
+[33ma1f6126[m 17/10/2024
+[33m987cd45[m Version Abtchy Seneen Waya
