@@ -1,244 +1,34 @@
-// Carousel Caption
-
+// Document Ready Function
 $(document).ready(function () {
-  // Get all carousel captions
+  // Carousel Caption
   const captions = $(".carousel-caption");
-
-  // Initially show the first caption
   captions.eq(0).addClass("show");
 
-  // When the carousel slides change
   $("#carouselExampleFade").on("slide.bs.carousel", function () {
-    // Hide all captions
     captions.removeClass("show");
   });
 
   $("#carouselExampleFade").on("slid.bs.carousel", function () {
-    // After the slide transition, show the current caption
     const currentIndex = $(this).find(".active").index();
     captions.eq(currentIndex).addClass("show");
   });
-});
 
-// JavaScript to hide the navbar on scroll down and show it on scroll up
-
-let lastScrollTop = 0;
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", function () {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (scrollTop > lastScrollTop) {
-    // User is scrolling down
-    navbar.classList.add("hidden");
-  } else {
-    // User is scrolling up
-    navbar.classList.remove("hidden");
-  }
-
-  lastScrollTop = scrollTop;
-});
-
-// Form Email Submission form
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from reloading the page
-
-    // Create a FormData object to send the form data via AJAX
-    const formData = new FormData(this);
-
-    // Send the data to the PHP script
-    fetch("sendEmail.php", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.text())
-      .then((data) => {
-        if (data === "success") {
-          // Show the confirmation message
-          document.getElementById("confirmationMessage").style.display =
-            "block";
-          // Reset the form
-          document.getElementById("contactForm").reset();
-        } else {
-          alert("There was an error sending the message. Please try again.");
-        }
-      })
-      .catch((error) => {
-        alert("Error: " + error);
-      });
-  });
-
-// Welcome Page Carousel
-
-$(document).ready(function () {
-  // Initialize the carousel with a fade effect
+  // Welcome Page Carousel
   $("#welcomeCarousel").carousel({
-    interval: 5000, // Adjust the time for slide duration
+    interval: 5000,
     ride: "carousel",
     wrap: true,
   });
-});
 
-// This ensures that the carousel starts and uses Bootstrap's functionality
-var myCarousel = document.querySelector("#carouselExample");
-var carousel = new bootstrap.Carousel(myCarousel, {
-  interval: 2000, // Set your interval here
-  wrap: true, // Enable wrapping to the first slide
-});
-
-// Optional: To preload images if needed
-const images = ["images/slide1.jpg", "images/slide2.jpg", "images/slide3.jpg"];
-images.forEach((src) => {
-  const img = new Image();
-  img.src = src;
-});
-
-// back to the top button
-
-// Get the button
-let backToTopButton = document.getElementById("backToTop");
-
-// Show the button when scrolled down 100px
-window.onscroll = function () {
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-};
-
-// Scroll back to the top when the button is clicked
-backToTopButton.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // Smooth scroll
-  });
-});
-
-// Counter
-
-// Counter animation
-const counters = document.querySelectorAll(".counter");
-let counterSection = document.querySelector("#counter-section");
-let started = false;
-
-window.addEventListener("scroll", function () {
-  const sectionPos = counterSection.getBoundingClientRect().top;
-  const screenPos = window.innerHeight / 1.5;
-
-  if (!started && sectionPos < screenPos) {
-    counters.forEach((counter) => {
-      const updateCount = () => {
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
-        const increment = target / 100;
-
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 30);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      updateCount();
-    });
-    started = true;
-  }
-});
-
-// Home Caption Animation
-document.addEventListener("DOMContentLoaded", function () {
-  // Select all elements with class 'caption'
-  const captions = document.querySelectorAll(".carousel-caption p");
-
-  captions.forEach((caption) => {
-    const text = caption.innerText; // Get the full text
-    const words = text.split(" "); // Split the text into words
-    caption.innerHTML = ""; // Clear the caption content
-
-    // Loop through the words and wrap each one in a <span> with delay
-    words.forEach((word, index) => {
-      const span = document.createElement("span"); // Create a span for each word
-      span.innerText = word;
-
-      // Set a delay for each word's animation (increasing delay per word)
-      span.style.setProperty("--delay", `${index * 0.1}s`);
-
-      caption.appendChild(span); // Append the word span
-      caption.appendChild(document.createTextNode(" ")); // Add a space after each word
-    });
-  });
-});
-
-// Pro Display Section
-
-document.addEventListener("DOMContentLoaded", function () {
-  const professionalismSection = document.getElementById(
-    "professionalism-section"
-  );
-
-  function fadeInSection() {
-    const sectionPos = professionalismSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight / 1.3;
-
-    if (sectionPos < screenPos) {
-      professionalismSection.classList.add("fade-in");
-    }
-  }
-
-  window.addEventListener("scroll", fadeInSection);
-});
-
-// Projects sliders
-
-document.addEventListener("DOMContentLoaded", function () {
-  const projectBlocks = document.querySelectorAll(".project-block");
-  let lastScrollTop = window.pageYOffset;
-
-  function handleScroll() {
-    let scrollTop = window.pageYOffset;
-    let scrollDown = scrollTop > lastScrollTop;
-
-    projectBlocks.forEach((block) => {
-      const rect = block.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // Apply the "visible" class only when scrolling down and in the viewport
-      if (scrollDown && rect.top < windowHeight && rect.bottom >= 0) {
-        block.classList.add("visible");
-      }
-    });
-
-    lastScrollTop = scrollTop;
-  }
-
-  window.addEventListener("scroll", handleScroll);
-  handleScroll(); // Initial call to handle elements in the viewport on load
-});
-
-// Services Cards
-$(document).ready(function () {
+  // Slick Carousel (Services Section)
   $(".slick-carousel").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true, // Optional: shows navigation arrows
-    dots: true, // Optional: shows dots for navigation
-    autoplay: true, // Optional: enables autoplay
-    autoplaySpeed: 2000, // Optional: controls autoplay speed
-  });
-});
-
-$(document).ready(function () {
-  $(".slick-carousel").slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 768,
@@ -258,6 +48,147 @@ $(document).ready(function () {
   });
 });
 
-AOS.init({
-  duration: 1200, // Duration of the animation
+// Navbar Hide/Show on Scroll
+let lastScrollTop = 0;
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", function () {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  navbar.classList.toggle("hidden", scrollTop > lastScrollTop);
+  lastScrollTop = scrollTop;
+});
+
+// Back-to-Top Button
+const backToTopButton = document.getElementById("backToTop");
+
+window.onscroll = function () {
+  backToTopButton.style.display =
+    document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
+      ? "block"
+      : "none";
+};
+
+backToTopButton.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Form Email Submission
+document
+  .getElementById("contactForm")
+  ?.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    fetch("sendEmail.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        if (data === "success") {
+          document.getElementById("confirmationMessage").style.display =
+            "block";
+          this.reset();
+        } else {
+          alert("There was an error sending the message. Please try again.");
+        }
+      })
+      .catch((error) => {
+        alert("Error: " + error);
+      });
+  });
+
+// Counter Animation
+const counters = document.querySelectorAll(".counter");
+const counterSection = document.querySelector("#counter-section");
+let counterStarted = false;
+
+window.addEventListener("scroll", function () {
+  const sectionPos = counterSection?.getBoundingClientRect().top;
+  const screenPos = window.innerHeight / 1.5;
+
+  if (!counterStarted && sectionPos < screenPos) {
+    counters.forEach((counter) => {
+      const updateCount = () => {
+        const target = +counter.getAttribute("data-target");
+        const count = +counter.innerText;
+        const increment = target / 100;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+    counterStarted = true;
+  }
+});
+
+// Home Caption Animation
+document.addEventListener("DOMContentLoaded", function () {
+  const captions = document.querySelectorAll(".carousel-caption p");
+
+  captions.forEach((caption) => {
+    const text = caption.innerText;
+    const words = text.split(" ");
+    caption.innerHTML = "";
+
+    words.forEach((word, index) => {
+      const span = document.createElement("span");
+      span.innerText = word;
+      span.style.setProperty("--delay", `${index * 0.1}s`);
+      caption.appendChild(span);
+      caption.appendChild(document.createTextNode(" "));
+    });
+  });
+});
+
+// Professionalism Section Fade-In
+const professionalismSection = document.getElementById(
+  "professionalism-section"
+);
+
+window.addEventListener("scroll", function () {
+  const sectionPos = professionalismSection?.getBoundingClientRect().top;
+  const screenPos = window.innerHeight / 1.3;
+
+  if (sectionPos < screenPos) {
+    professionalismSection.classList.add("fade-in");
+  }
+});
+
+// Projects Slider Animation
+const projectBlocks = document.querySelectorAll(".project-block");
+let lastScrollPosition = window.pageYOffset;
+
+function handleScroll() {
+  const scrollTop = window.pageYOffset;
+  const isScrollingDown = scrollTop > lastScrollPosition;
+
+  projectBlocks.forEach((block) => {
+    const rect = block.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (isScrollingDown && rect.top < windowHeight && rect.bottom >= 0) {
+      block.classList.add("visible");
+    }
+  });
+
+  lastScrollPosition = scrollTop;
+}
+
+window.addEventListener("scroll", handleScroll);
+handleScroll(); // Trigger on page load to check initial visibility
+
+// AOS Animation Initialization
+AOS.init({ duration: 1200 });
+
+// ScrollReveal Initialization
+ScrollReveal().reveal(".section", {
+  delay: 200,
+  distance: "50px",
+  origin: "bottom",
 });
