@@ -459,7 +459,7 @@ h5 {
 /* Responsive: Adjust the button's size on smaller screens */
 @media (max-width: 600px) {
   .back-to-top {
-    padding: 10px;
+    padding: 18px;
     font-size: 18px;
     bottom: 15px;
     right: 15px;
@@ -513,7 +513,7 @@ h5 {
 }
 
 .call-to-action {
-  background-image: url("../images/contact2.jpeg"); /* Replace with your image */
+  background-image: url("../images/Contact1.png"); /* Replace with your image */
   background-attachment: fixed; /* Only this section's background will move on scroll */
   background-position: center;
   background-repeat: no-repeat;
@@ -613,6 +613,40 @@ h5 {
   padding: 1rem 3.5rem;
 }
 
+@media (max-width: 768px) {
+  .call-to-action {
+    text-align: center; /* Center align all content */
+    padding: 3rem 1rem; /* Reduce padding for smaller screens */
+    background-attachment: scroll; /* Disable parallax effect on mobile */
+  }
+
+  .call-to-action h2 {
+    font-size: 1.8rem; /* Reduce heading size */
+    margin-bottom: 1rem; /* Adjust spacing below heading */
+  }
+
+  .call-to-action p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    margin-bottom: 1.5rem; /* Add spacing below text */
+  }
+
+  .call-to-action .btn,
+  .call-to-action form {
+    width: 100%; /* Make buttons and forms full width */
+    margin-bottom: 1rem; /* Add spacing below elements */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%; /* Ensure inputs and textareas fit within the screen */
+    margin-bottom: 1rem; /* Add spacing below inputs */
+  }
+
+  .overlay-text h2 {
+    font-size: 1.5rem; /* Reduce overlay text size */
+  }
+}
+
 /* Services */
 
 .services {
@@ -663,6 +697,27 @@ h5 {
   .service-card {
     flex: 1 0 100%; /* Full width on smaller screens */
     margin: 0.5rem 0; /* Adjust margin for mobile */
+  }
+  #services {
+    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .service-card {
+    flex: 1 0 100%; /* Make service cards full width */
+    margin: 0.5rem 0; /* Add margin between stacked cards */
+    text-align: left; /* Align text to the left for better readability */
+  }
+
+  .icon {
+    font-size: 2.5rem; /* Adjust icon size for mobile */
+  }
+
+  .service-card h3 {
+    font-size: 1.3rem; /* Reduce heading size for mobile */
+  }
+
+  .service-card p {
+    font-size: 1rem; /* Adjust paragraph text size */
   }
 }
 
@@ -718,17 +773,6 @@ h5 {
   color: #052659;
 }
 
-@media (max-width: 768px) {
-  .footer .row > div {
-    text-align: center; /* Center align for smaller screens */
-    margin-bottom: 20px; /* Add some margin for spacing */
-  }
-
-  .footer .social-icons {
-    justify-content: center; /* Center social icons */
-  }
-}
-
 .footer ul li a {
   color: #f6e3ba; /* Initial link color */
   text-decoration: none;
@@ -737,6 +781,41 @@ h5 {
 
 .footer ul li a:hover {
   color: #052659 !important; /* Hover color with !important to enforce the style */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center; /* Center text and content on mobile */
+    padding: 2rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .footer h5 {
+    font-size: 1.1rem; /* Slightly reduce heading size */
+    margin-bottom: 1rem; /* Reduce space below headings */
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 0.9rem; /* Reduce text size for readability */
+  }
+
+  .footer ul {
+    padding: 0;
+    margin: 0; /* Remove unnecessary spacing */
+  }
+
+  .footer ul li {
+    margin-bottom: 0.5rem; /* Adjust spacing between list items */
+  }
+
+  .footer .social-icons {
+    justify-content: center; /* Center align social icons */
+    margin-bottom: 1rem; /* Add spacing below social icons */
+  }
+
+  .footer .social-icons a {
+    margin-right: 10px; /* Reduce spacing between icons */
+  }
 }
 
 /* Initial state for fade-section */
@@ -748,6 +827,7 @@ h5 {
 .fade-in {
   opacity: 1;
 }
+
 
 
 .footer ul li a {
