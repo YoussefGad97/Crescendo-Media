@@ -192,3 +192,50 @@ ScrollReveal().reveal(".section", {
   distance: "50px",
   origin: "bottom",
 });
+
+// Wait for the modal to show
+$("#teamModal1").on("show.bs.modal", function (event) {
+  var button = $(event.relatedTarget); // Button that triggered the modal
+  var card = button.closest(".member"); // The card that was clicked
+  var modal = $(this); // The modal itself
+
+  // Get the card's position and dimensions
+  var cardPosition = card.offset();
+  var cardWidth = card.outerWidth();
+  var cardHeight = card.outerHeight();
+
+  // Set modal position and size to match the clicked card's dimensions
+  modal.css({
+    top: cardPosition.top,
+    left: cardPosition.left,
+    width: cardWidth,
+    height: cardHeight,
+    opacity: 0, // Start with opacity 0 to give the transition effect
+  });
+
+  // Animate the modal to its final size and position
+  setTimeout(() => {
+    modal.animate(
+      {
+        top: "50%", // Position modal in the center
+        left: "50%",
+        width: "80%", // Adjust size for desktop (can be tweaked)
+        height: "auto",
+        opacity: 1,
+      },
+      300
+    ); // Animation speed (300ms)
+  }, 10);
+});
+
+// When modal is hidden, reset its position and size
+$("#teamModal1").on("hidden.bs.modal", function () {
+  var modal = $(this);
+  modal.css({
+    top: "",
+    left: "",
+    width: "",
+    height: "",
+    opacity: "",
+  });
+});
