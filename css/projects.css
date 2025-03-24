@@ -28,7 +28,7 @@ h5 {
   transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
   position: fixed; /* Fix navbar on top */
   width: 100%;
-  z-index: 1000; /* Ensure it’s always on top */
+  z-index: 1000; /* Ensure it's always on top */
   top: 0;
 }
 
@@ -78,7 +78,7 @@ h5 {
     transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
     position: fixed; /* Fix navbar on top */
     width: 100%;
-    z-index: 1000; /* Ensure it’s always on top */
+    z-index: 1000; /* Ensure it's always on top */
     top: 0;
   }
 }
@@ -167,6 +167,15 @@ h5 {
 }
 
 @media (max-width: 768px) {
+  .project-block:nth-child(even) {
+    flex-direction: column-reverse; /* Switch image and text positions */
+  }
+
+  .project-block:nth-child(even) img {
+    margin-left: 0; /* Reset margin for mobile */
+    margin-bottom: 20px; /* Add spacing below the image */
+  }
+
   .project-block {
     flex-direction: column;
   }
@@ -255,9 +264,8 @@ h5 {
 }
 
 /* Projects Landing Page */
-
 .projects {
-  padding: 15rem;
+  padding: 10rem 0; /* Adjusted padding for better spacing */
   color: white;
   font-size: 1.3rem;
   position: relative;
@@ -265,8 +273,12 @@ h5 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 60vh; /* Adjusted height for better proportions */
   background-attachment: fixed; /* Restore parallax effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .projects::before {
@@ -283,8 +295,9 @@ h5 {
 .projects h2 {
   color: #00acd5;
   font-size: 3rem;
-  font-weight: Bolder;
-  /* No padding-top for desktop */
+  font-weight: bolder;
+  position: relative;
+  z-index: 2; /* Ensures text is above the overlay */
 }
 
 /* Pro Section */
@@ -623,14 +636,15 @@ h5 {
 
 @media (max-width: 768px) {
   .projects {
-    padding: 8rem 1rem;
-    height: 80vh;
+    padding: 8rem 1rem; /* Increased top padding for mobile */
+    margin-top: 4.5rem; /* Added top margin for mobile */
+    height: 50vh; /* Adjusted height for mobile */
     background-attachment: scroll; /* Disable parallax on mobile */
   }
 
   .projects h2 {
-    padding-top: 3rem;
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Adjusted font size for mobile */
+    margin-top: 1rem; /* Added top margin for the heading */
   }
 
   .project-block {
@@ -640,33 +654,45 @@ h5 {
   }
 
   .project-block img {
-    margin: 0 0 20px 0;
+    width: 100%; /* Full width for mobile */
+    margin: 0 0 20px 0; /* Adjusted margin for better spacing */
   }
 
   .project-content {
-    text-align: center;
+    width: 100%; /* Full width for mobile */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .project-content h2 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+    margin-bottom: 15px; /* Adjusted margin for better spacing */
+  }
+
+  .project-content ul li {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    line-height: 1.5; /* Improved line spacing for readability */
   }
 
   .call-to-action {
-    padding: 50px 10px;
+    padding: 50px 10px; /* Reduced padding for mobile */
   }
 
   .call-to-action h2 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Smaller font size for mobile */
   }
 
   .overlay-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Smaller font size for mobile */
   }
 
   .form-group input,
   .form-group textarea {
-    width: 90%;
-    margin: 0 auto;
+    width: 90%; /* Full width for mobile */
+    margin: 0 auto; /* Center align inputs */
   }
 
   #confirmationMessage {
-    width: 90%;
+    width: 90%; /* Full width for mobile */
   }
 }
 .navbar-brand {
