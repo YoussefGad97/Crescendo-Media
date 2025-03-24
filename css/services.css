@@ -2,7 +2,9 @@
 
 body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
-  font-family: "Roboto", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 body h1,
@@ -32,20 +34,20 @@ h5 {
 
 .navbar-brand {
   font-size: 1.5rem;
-  color: white;
+  color: #c1e8ff;
   font-weight: bold;
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: white; /* White nav items */
+  color: #c1e8ff; /* White nav items */
   margin-right: 20px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #00acd5; /* Lighter color on hover */
+  color: #7da0ca; /* Lighter color on hover */
 }
 
 /* Active link styling */
@@ -129,173 +131,173 @@ h2 {
 
 /* Service Card Modern Design */
 .service-card {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    margin: 1rem;
-    width: 100%;
-    max-width: 500px;
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    min-height: 450px; /* Set minimum height for consistency */
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 1rem;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  min-height: 450px; /* Set minimum height for consistency */
 }
 
 /* Card Hover Effect */
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    border-color: rgba(0, 172, 213, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 172, 213, 0.3);
 }
 
 /* Image Section */
 .image-carousel {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-    border-bottom: 2px solid rgba(0, 172, 213, 0.1);
-    border-radius: 15px 15px 0 0;
-    padding-top: 15px;
-    margin: 15px 15px 0 15px;
-    flex-shrink: 0; /* Prevent image section from shrinking */
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(0, 172, 213, 0.1);
+  border-radius: 15px 15px 0 0;
+  padding-top: 15px;
+  margin: 15px 15px 0 15px;
+  flex-shrink: 0; /* Prevent image section from shrinking */
 }
 
 .carousel-image img {
-    width: calc(100% - 30px); /* Adjust width to account for padding */
-    height: calc(100% - 15px); /* Adjust height to account for padding */
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 15px; /* All corners rounded */
-    margin: 0 auto; /* Center the image */
-    display: block;
+  width: calc(100% - 30px); /* Adjust width to account for padding */
+  height: calc(100% - 15px); /* Adjust height to account for padding */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 15px; /* All corners rounded */
+  margin: 0 auto; /* Center the image */
+  display: block;
 }
 
 /* Adjust image size on hover */
 .service-card:hover .carousel-image img {
-    transform: scale(1.02); /* Subtle zoom effect */
+  transform: scale(1.02); /* Subtle zoom effect */
 }
 
 /* Content Section */
 .service-info {
-    padding: 1.5rem;
-    background-color: white;
-    position: relative;
-    flex-grow: 1; /* Allow content section to grow */
-    display: flex;
-    flex-direction: column;
+  padding: 1.5rem;
+  background-color: white;
+  position: relative;
+  flex-grow: 1; /* Allow content section to grow */
+  display: flex;
+  flex-direction: column;
 }
 
 .service-info h3 {
-    color: #00acd5;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    position: relative;
-    padding-left: 2rem;
-    flex-shrink: 0; /* Prevent title from shrinking */
+  color: #00acd5;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+  flex-shrink: 0; /* Prevent title from shrinking */
 }
 
 .service-info h3 i {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #00acd5;
-    font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00acd5;
+  font-size: 1.2rem;
 }
 
 .service-info p {
-    color: #444;
-    line-height: 1.6;
-    font-size: 0.95rem;
-    flex-grow: 1; /* Allow text to grow and fill space */
-    margin-bottom: 1rem; /* Consistent bottom margin */
+  color: #444;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  flex-grow: 1; /* Allow text to grow and fill space */
+  margin-bottom: 1rem; /* Consistent bottom margin */
 }
 
 /* Add a subtle overlay on hover */
 .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 172, 213, 0.03);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 172, 213, 0.03);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .service-card:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Add a subtle border animation */
 .service-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #00acd5;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #00acd5;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .service-card:hover::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .service-card {
-        min-height: 380px; /* Reduced minimum height for better mobile fit */
-        margin: 0.75rem; /* Adjusted margin for better spacing */
-    }
-    
-    .image-carousel {
-        height: 160px; /* Reduced height for better mobile proportions */
-        border-radius: 10px 10px 0 0;
-        padding-top: 10px;
-        margin: 10px 10px 0 10px;
-    }
-    
-    .service-info {
-        padding: 1.25rem; /* Adjusted padding for better spacing */
-    }
-    
-    .service-info h3 {
-        font-size: 1.25rem; /* Slightly larger font for better readability */
-        padding-left: 1.75rem; /* Adjusted icon spacing */
-    }
-    
-    .service-info p {
-        font-size: 0.9rem;
-        line-height: 1.5; /* Improved line spacing for readability */
-    }
+  .service-card {
+    min-height: 380px; /* Reduced minimum height for better mobile fit */
+    margin: 0.75rem; /* Adjusted margin for better spacing */
+  }
 
-    /* Adjust services section padding */
-    .services-section {
-        padding: 3rem 0; /* Reduced padding for better mobile use of space */
-    }
+  .image-carousel {
+    height: 160px; /* Reduced height for better mobile proportions */
+    border-radius: 10px 10px 0 0;
+    padding-top: 10px;
+    margin: 10px 10px 0 10px;
+  }
 
-    /* Adjust services landing section */
-    .servicesHomePage {
-        padding-top: 8rem; /* Reduced padding for better mobile fit */
-        height: 60vh; /* Adjusted height for mobile */
-    }
+  .service-info {
+    padding: 1.25rem; /* Adjusted padding for better spacing */
+  }
 
-    .servicesHomePage h2 {
-        font-size: 2rem; /* Slightly smaller heading for mobile */
-    }
+  .service-info h3 {
+    font-size: 1.25rem; /* Slightly larger font for better readability */
+    padding-left: 1.75rem; /* Adjusted icon spacing */
+  }
 
-    .servicesHomePage p {
-        font-size: 1.1rem; /* Adjusted font size for better readability */
-    }
+  .service-info p {
+    font-size: 0.9rem;
+    line-height: 1.5; /* Improved line spacing for readability */
+  }
+
+  /* Adjust services section padding */
+  .services-section {
+    padding: 3rem 0; /* Reduced padding for better mobile use of space */
+  }
+
+  /* Adjust services landing section */
+  .servicesHomePage {
+    padding-top: 8rem; /* Reduced padding for better mobile fit */
+    height: 60vh; /* Adjusted height for mobile */
+  }
+
+  .servicesHomePage h2 {
+    font-size: 2rem; /* Slightly smaller heading for mobile */
+  }
+
+  .servicesHomePage p {
+    font-size: 1.1rem; /* Adjusted font size for better readability */
+  }
 }
 
 /* Testimonials */
@@ -543,19 +545,24 @@ p.text-muted {
 /* Style for the back-to-top button */
 .back-to-top {
   position: fixed;
-  bottom: 2%;
+  bottom: 20px;
   right: 20px;
   display: none; /* Hidden initially */
   background-color: #00acd5; /* blue background */
   color: #ffffff; /* White text */
   border: none;
-  border-radius: 40%;
-  font-size: 10px;
-  padding: 5px;
+  border-radius: 50%;
+  padding: 12px 15px; /* Adjusted padding for better proportions */
+  font-size: 20px; /* Slightly smaller font size */
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease-in-out;
   z-index: 2;
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Hover effect */
@@ -566,8 +573,10 @@ p.text-muted {
 /* Responsive: Adjust the button's size on smaller screens */
 @media (max-width: 600px) {
   .back-to-top {
-    padding: 10px;
-    font-size: 18px;
+    padding: 8px 10px; /* Reduced padding for mobile */
+    font-size: 16px; /* Smaller font size for mobile */
+    width: 40px; /* Smaller width for mobile */
+    height: 40px; /* Smaller height for mobile */
     bottom: 15px;
     right: 15px;
   }

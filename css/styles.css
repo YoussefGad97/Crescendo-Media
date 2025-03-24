@@ -1,0 +1,61 @@
+/* Navbar styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Primary background color */
+    padding: 1rem 1.5rem;
+    transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
+    position: fixed; /* Fix navbar on top */
+    width: 100%;
+    z-index: 1000; /* Ensure it's always on top */
+    top: 0;
+}
+
+.navbar.hidden {
+    top: -100px; /* Hide navbar out of view */
+    opacity: 0; /* Fade out effect */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white; /* White nav items */
+    margin-right: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #00acd5; /* Lighter color on hover */
+}
+
+/* Active link styling */
+.navbar-nav .nav-item .active {
+    border-bottom: 2px solid white;
+}
+
+/* Responsive for mobile (NavMobile)*/
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        margin-right: 0;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .navbar {
+        background-color: black; /* Primary background color */
+        padding: 1rem 1.5rem;
+        transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
+        position: fixed; /* Fix navbar on top */
+        width: 100%;
+        z-index: 1000; /* Ensure it's always on top */
+        top: 0;
+    }
+} 

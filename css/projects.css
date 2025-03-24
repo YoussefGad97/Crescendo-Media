@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
@@ -20,7 +21,6 @@ h5 {
 }
 
 /* NavBar */
-
 /* Navbar styling */
 .navbar {
   background-color: rgba(0, 0, 0, 0.5); /* Primary background color */
@@ -28,7 +28,7 @@ h5 {
   transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
   position: fixed; /* Fix navbar on top */
   width: 100%;
-  z-index: 1000; /* Ensure it's always on top */
+  z-index: 1000; /* Ensure it’s always on top */
   top: 0;
 }
 
@@ -46,7 +46,7 @@ h5 {
 .navbar-nav .nav-item .nav-link {
   color: #c1e8ff; /* White nav items */
   margin-right: 20px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -78,25 +78,8 @@ h5 {
     transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
     position: fixed; /* Fix navbar on top */
     width: 100%;
-    z-index: 1000; /* Ensure it's always on top */
+    z-index: 1000; /* Ensure it’s always on top */
     top: 0;
-  }
-
-  /* Specific styles for 2nd and 4th project cards */
-  .project-block:nth-child(2),
-  .project-block:nth-child(4) {
-    flex-direction: column;
-  }
-
-  .project-block:nth-child(2) img,
-  .project-block:nth-child(4) img {
-    order: 1;
-    margin-bottom: 20px;
-  }
-
-  .project-block:nth-child(2) .project-content,
-  .project-block:nth-child(4) .project-content {
-    order: 2;
   }
 }
 
@@ -140,7 +123,7 @@ h5 {
   width: 100%;
   max-width: 100vw;
   padding: 0 15px;
-    margin: 0 auto;
+  margin: 0 auto;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -269,69 +252,6 @@ h5 {
   opacity: 1;
   filter: invert(39%) sepia(94%) saturate(492%) hue-rotate(169deg)
     brightness(95%) contrast(101%);
-}
-
-/* NavBar */
-/* Navbar styling */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.5); /* Primary background color */
-  padding: 1rem 1.5rem;
-  transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
-  position: fixed; /* Fix navbar on top */
-  width: 100%;
-  z-index: 1000; /* Ensure it's always on top */
-  top: 0;
-}
-
-.navbar.hidden {
-  top: -100px; /* Hide navbar out of view */
-  opacity: 0; /* Fade out effect */
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bold;
-}
-
-.navbar-nav .nav-item .nav-link {
-  color: white; /* White nav items */
-  margin-right: 20px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-  color: #00acd5; /* Lighter color on hover */
-}
-
-/* Active link styling */
-.navbar-nav .nav-item .active {
-  border-bottom: 2px solid white;
-}
-
-/* Responsive for mobile (NavMobile)*/
-@media (max-width: 768px) {
-  .navbar-brand {
-    font-size: 1.25rem;
-  }
-
-  .navbar-nav .nav-item .nav-link {
-    margin-right: 0;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .navbar {
-    background-color: black; /* Primary background color */
-    padding: 1rem 1.5rem;
-    transition: top 0.5s ease, opacity 0.5s ease; /* Smooth transition for hiding/showing */
-    position: fixed; /* Fix navbar on top */
-    width: 100%;
-    z-index: 1000; /* Ensure it's always on top */
-    top: 0;
-  }
 }
 
 /* Projects Landing Page */
@@ -749,4 +669,14 @@ h5 {
     width: 90%;
   }
 }
+.navbar-brand {
+  color: #c1e8ff !important; /* Force override */
+}
 
+.navbar-nav .nav-item .nav-link {
+  color: #c1e8ff !important; /* Force override */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #7da0ca !important; /* Force override */
+}
